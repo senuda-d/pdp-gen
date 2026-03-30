@@ -5,7 +5,7 @@ import data from "../data/questions.json";
 function FormPage() {
   const navigate = useNavigate();
   const [answers, setAnswers] = useState({
-    "1": "Senuda Dil",
+    "1": "Kamal",
     "2": "20",
     "3": "Colombo, Sri Lanka",
     "4": "BSc in IT at SLIIT (in progress)",
@@ -30,7 +30,8 @@ function FormPage() {
     "23": "Actively engaged in personal web development projects, leading small collaborative teams.",
     "24": "Hands-on experience across frontend and backend development.",
     "25": "Contributed to academic and personal projects spanning web application development.",
-    "26": "Ongoing education in Information Technology (BSc in IT at SLIIT) with practical skills in modern web technologies and active participation in peer study groups and mentorship networks."
+    "26": "Ongoing education in Information Technology (BSc in IT at SLIIT) with practical skills in modern web technologies and active participation in peer study groups and mentorship networks.",
+    "27": "1 year 2 semester"
   });
   const [error, setError] = useState("");
 
@@ -68,7 +69,8 @@ function FormPage() {
       "23": "Actively engaged in personal web development projects, leading small collaborative teams.",
       "24": "Hands-on experience across frontend and backend development.",
       "25": "Contributed to academic and personal projects spanning web application development.",
-      "26": "Ongoing education in Information Technology (BSc in IT at SLIIT) with practical skills in modern web technologies and active participation in peer study groups and mentorship networks."
+      "26": "Ongoing education in Information Technology (BSc in IT at SLIIT) with practical skills in modern web technologies and active participation in peer study groups and mentorship networks.",
+      "27": "1 year 2 semester"
     });
   };
 
@@ -143,8 +145,8 @@ function FormPage() {
           <button className="secondary-btn" onClick={fillTestData}>Load Another Sample</button>
           <button className="secondary-btn" onClick={() => setAnswers({})}>Clear All</button>
         </div>
-        
-        <button 
+
+        <button
           className="submit-btn"
           onClick={handleSubmit}
         >

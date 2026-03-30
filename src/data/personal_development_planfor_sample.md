@@ -412,21 +412,15 @@ This individual has strong entrepreneurial and leadership abilities, backed by i
 
 ## Big Five Personality Test
 
-< Here goest to : Your personal Test result image of personality test >
-
-<img src='example.png'/>
-
+> [!CAUTION]
+> **Please do this test and paste the screenshot here [https://www.outofservice.com/bigfive/]**
 
 ## Cognitive Style Test
 
-< Here goest to : Your personal Test result data Cognitive Style test >
-
 - K Value: 15
-- P Value:14
+- P Value: 14
 - C Value:16
 
 ## Locus of Control
-
-< Here goest to : Your personal Test result data Locus of Control test >
 
 - Test Value: 2

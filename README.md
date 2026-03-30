@@ -1,16 +1,90 @@
-# React + Vite
+# AI PDP Generator 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI PDP Generator is a sophisticated web application designed to help students and professionals craft highly personalized **Personal Development Plans (PDP)** using Artificial Intelligence. By answering a series of curated questions, users get a structured, professional development report streamed in real-time.
 
-Currently, two official plugins are available:
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![React](https://img.shields.io/badge/React-19-blue)
+![Vite](https://img.shields.io/badge/Vite-8-purple)
+![Gemini AI](https://img.shields.io/badge/AI-Gemini%20Flash-orange)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- **🤖 AI-Powered Planning**: Uses Google's Gemini AI to analyze your profile and goals.
+- **⚡ Real-time Streaming**: Watch your plan being generated word-by-word.
+- **📑 Professional Formatting**: Outputs clean Markdown with tables, headers, and clear sections.
+- **💾 Multiple Export Options**: 
+  - Save as **PDF** with optimized print layout.
+  - Download as **Word (.doc)** with native page breaks.
+  - Export as **Markdown (.md)** for GitHub or personal notes.
+- **🎨 Premium UI/UX**: Clean, modern interface with smooth animations, glassmorphism headers, and dark-themed footer.
+- **📱 Fully Responsive**: Seamless experience across desktops, tablets, and mobile devices.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React 19, Vite
+- **Routing**: React Router DOM
+- **AI Integration**: Google Generative AI (@google/generative-ai)
+- **Styling**: Vanilla CSS (Custom UI kit)
+- **Markdown Rendering**: React Markdown, Rehype-Raw
+- **Icons**: Lucide React
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18+)
+- npm or yarn
+- Google Gemini API Key ([Get it here](https://aistudio.google.com/))
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/senuda-d/pdp-gen.git
+   cd pdp-gen
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Environment Setup:**
+   Create a `.env` file in the root directory and add your API key:
+   ```env
+   VITE_GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+   *(See `.env.example` for reference)*
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/     # Reusable UI components (Header, Footer)
+├── data/           # Questions JSON and AI Prompts
+├── pages/          # Main application views (Form, Result)
+├── services/       # AI Service logic
+├── App.css         # Main styling system
+└── main.jsx        # App entry point
+```
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+---
+Built with ❤️ by [Senuda](https://github.com/senuda-d)

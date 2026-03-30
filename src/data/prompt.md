@@ -23,14 +23,15 @@ Generate a comprehensive and personalized PDP that strictly adheres to the struc
 
 # Important Rules
 
-*   **Do NOT assume missing information.** If details are absent, you must ask for clarification.
-*   **Do NOT generate the PDP until clarification is complete** for all essential fields.
+*   **Do NOT assume missing information.** If details are absent, mention those missing data as notice in    pdp doc.
 *   **Do NOT change or ignore the provided questions** or the user's answers.
 *   **Do NOT change the provided template structure** of the sample PDP.
 *   **Use professional, concise, and clear language.**
 *   **Ensure the output looks like a real formal development report.**
 *   **Format the Markdown cleanly and logically** without unnecessary HTML tags (e.g., `<div>`).
-*   **Format the Markdown with pages by indicating page number [page 01] as in eaxmple pdp** without unnecessary HTML tags (e.g., `<div>`). 
+*   **when generating the tables use <td>,<tr>,<th> tags.Don't use markdown format for tables** .
+*   **Do not show anything other than the pdp output dont ask any questions** .
+*   **Format the Markdown with pages by indicating page number [page 01] as in example pdp** without unnecessary HTML tags (e.g., `<div>`). 
     ```md
     [page 01]
     content for page 01

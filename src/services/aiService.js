@@ -1,41 +1,32 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import promptMarkdown from "../data/prompt.md?raw";
 import samplePDP from "../data/personal_development_planfor_sample.md?raw";
 
 /**
- * Service to generate a Personal Development Plan using Gemini AI
- * Requires VITE_GEMINI_API_KEY in .env
+ * Service to generate a Personal Development Plan using Vercel Serverless Function
+ * This version hides the API Key from the frontend.
  */
-const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-const genAI = new GoogleGenerativeAI(API_KEY);
 
 export const generatePDP = async (userAnswers) => {
   try {
-    if (!API_KEY) {
-      throw new Error("Gemini API Key is missing. Please add VITE_GEMINI_API_KEY to your .env file.");
+    const response = await fetch("/api/gemini", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userAnswers,
+        promptMarkdown,
+        samplePDP,
+      }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || "Failed to generate your plan.");
     }
 
-    // Using Gemini 2.5 Flash as it is listed as the stable model for this API key.
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-
-    // Construct the final prompt by combining the template, the sample, and the user's answers
-    const finalPrompt = `
-      ${promptMarkdown}
-
-      --- SAMPLE PDP FOR STRUCTURE REFERENCE ---
-      ${samplePDP}
-
-      --- USER ANSWERS TO QUESTIONS ---
-      ${JSON.stringify(userAnswers, null, 2)}
-
-      Please generate the final Personal Development Plan now based on the instructions in the prompt.
-    `;
-
-    const result = await model.generateContent(finalPrompt);
-    const response = await result.response;
-    const text = response.text();
-
-    return text;
+    const data = await response.json();
+    return data.text;
   } catch (error) {
     console.error("Error generating PDP:", error);
     throw error;
@@ -44,28 +35,46 @@ export const generatePDP = async (userAnswers) => {
 
 export const generatePDPStream = async function* (userAnswers) {
   try {
-    if (!API_KEY) {
-      throw new Error("Gemini API Key is missing. Please add VITE_GEMINI_API_KEY to your .env file.");
+    const response = await fetch("/api/gemini", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userAnswers,
+        promptMarkdown,
+        samplePDP,
+        stream: true,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to start stream");
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
 
-    const finalPrompt = `
-      ${promptData.prompt}
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
 
-      --- SAMPLE PDP FOR STRUCTURE REFERENCE ---
-      ${samplePDP}
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split("\n\n");
+      buffer = lines.pop(); // Keep last incomplete line
 
-      --- USER ANSWERS TO QUESTIONS ---
-      ${JSON.stringify(userAnswers, null, 2)}
-
-      Please generate the final Personal Development Plan now based on the instructions in the prompt.
-    `;
-
-    const result = await model.generateContentStream(finalPrompt);
-    for await (const chunk of result.stream) {
-      if (chunk.text) {
-        yield chunk.text();
+      for (const line of lines) {
+        if (line.startsWith("data: ")) {
+          try {
+            const data = JSON.parse(line.slice(6));
+            if (data.text) {
+              yield data.text;
+            }
+          } catch (e) {
+            console.error("Error parsing stream chunk:", e);
+          }
+        }
       }
     }
   } catch (error) {

@@ -3,12 +3,13 @@
     {
       "section": "Q1. Basic Info",
       "items": [
-        { "id": 1, "question": "What is your name?", "type": "input", "placeholder": "e.g., Senuda Dil" },
+        { "id": 1, "question": "What is your name?", "type": "input", "placeholder": "e.g., Kamal" },
         { "id": 2, "question": "What is your age?", "type": "input", "placeholder": "e.g., 20" },
         { "id": 3, "question": "What is your current location?", "type": "input", "placeholder": "e.g., Colombo, Sri Lanka" },
         { "id": 4, "question": "What is your educational background?", "type": "textarea", "placeholder": "e.g., BSc in IT at SLIIT (in progress)" },
         { "id": 19, "question": "What is your IT number?", "type": "input", "placeholder": "e.g., it241000000" },
-        { "id": 20, "question": "What is your specialization?", "type": "input", "placeholder": "e.g., Specializing in Data Science" }
+        { "id": 20, "question": "What is your specialization?", "type": "input", "placeholder": "e.g., Specializing in Data Science" },
+        { "id": 27, "question": "Current Academic Status", "type": "input", "placeholder": "e.g., 1 year 2 semester" }
       ]
     },
     {
