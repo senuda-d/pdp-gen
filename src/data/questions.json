@@ -1,0 +1,52 @@
+{
+  "questions": [
+    {
+      "section": "Q1. Basic Info",
+      "items": [
+        { "id": 1, "question": "What is your name?", "type": "input", "placeholder": "e.g., Senuda Dil" },
+        { "id": 2, "question": "What is your age?", "type": "input", "placeholder": "e.g., 20" },
+        { "id": 3, "question": "What is your current location?", "type": "input", "placeholder": "e.g., Colombo, Sri Lanka" },
+        { "id": 4, "question": "What is your educational background?", "type": "textarea", "placeholder": "e.g., BSc in IT at SLIIT (in progress)" }
+      ]
+    },
+    {
+      "section": "Q2. Personality & Working Style",
+      "items": [
+        { "id": 5, "question": "Describe your personality", "type": "textarea", "placeholder": "e.g., Introverted, analytical, calm" },
+        { "id": 6, "question": "What are your core values?", "type": "textarea", "placeholder": "e.g., Growth, discipline, honesty" },
+        { "id": 7, "question": "How do you prefer to learn?", "type": "textarea", "placeholder": "e.g., Hands-on projects, YouTube tutorials" }
+      ]
+    },
+    {
+      "section": "Q3. Career & Goals",
+      "items": [
+        { "id": 8, "question": "What is your short-term goal?", "type": "textarea", "placeholder": "e.g., Get an internship as a developer" },
+        { "id": 9, "question": "What is your long-term vision?", "type": "textarea", "placeholder": "e.g., Become a senior software engineer abroad" },
+        { "id": 10, "question": "What role or industry are you working toward?", "type": "input", "placeholder": "e.g., Full-stack developer" }
+      ]
+    },
+    {
+      "section": "Q4. Skills & Experience",
+      "items": [
+        { "id": 11, "question": "Your top strengths or skills", "type": "textarea", "placeholder": "e.g., Java, problem solving, teamwork" },
+        { "id": 12, "question": "Skills you need to improve", "type": "textarea", "placeholder": "e.g., Communication, React, backend" },
+        { "id": 13, "question": "Projects or achievements", "type": "textarea", "placeholder": "e.g., Built a vehicle management system" }
+      ]
+    },
+    {
+      "section": "Q5. Challenges & Support",
+      "items": [
+        { "id": 14, "question": "Biggest challenges you face", "type": "textarea", "placeholder": "e.g., Time management, consistency" },
+        { "id": 15, "question": "External factors affecting growth", "type": "textarea", "placeholder": "e.g., Limited resources, opportunities" },
+        { "id": 16, "question": "Support systems you rely on", "type": "textarea", "placeholder": "e.g., Friends, online communities" }
+      ]
+    },
+    {
+      "section": "Q6. Preferences for the Plan",
+      "items": [
+        { "id": 17, "question": "Time horizon for the plan", "type": "input", "placeholder": "e.g., 1 year" },
+        { "id": 18, "question": "Any specific sections to include?", "type": "textarea", "placeholder": "e.g., Fitness, finance, mindset" }
+      ]
+    }
+  ]
+}
