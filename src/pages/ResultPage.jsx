@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
-import { Download, ChevronDown, FileText, File } from "lucide-react";
+import { Download, ChevronDown, FileText, File, AlertTriangle, Clock } from "lucide-react";
 import { generatePDPStream } from "../services/aiService";
 
 function ResultPage() {
@@ -146,7 +146,38 @@ function ResultPage() {
       </header>
 
       {error ? (
-        <div className="error-message">{error}</div>
+        <div className={
+          (error.toLowerCase().includes("quota") || error.includes("429") || error.toLowerCase().includes("limit"))
+            ? "quota-error-card fadeIn" 
+            : "error-message"
+        }>
+          {(error.toLowerCase().includes("quota") || error.includes("429") || error.toLowerCase().includes("limit")) ? (
+            <div className="quota-content">
+              <div className="quota-icon-wrapper">
+                <AlertTriangle size={32} />
+              </div>
+              <div className="quota-info">
+                <h3>Daily Generation Limit Reached</h3>
+                <p>We are currently running on a free API tier which has a strictly limited number of generations per day.</p>
+                <div className="quota-notice">
+                  <Clock size={16} />
+                  <span>Please wait until the administrator updates the API key or try again in 24 hours.</span>
+                </div>
+                <button className="secondary-btn" onClick={() => navigate("/")} style={{ marginTop: '1.5rem', width: '100%' }}>
+                  Return to Home
+                </button>
+              </div>
+            </div>
+          ) : (
+            <>
+              <div style={{ fontWeight: 600, marginBottom: '8px' }}>Action Failed</div>
+              {error}
+              <button className="secondary-btn" onClick={() => navigate("/")} style={{ marginTop: '1rem', display: 'block' }}>
+                Try Again
+              </button>
+            </>
+          )}
+        </div>
       ) : (
         <div id="pdp-result" className="result-container fadeIn" style={{ marginTop: 0 }}>
           <div className="result-header">

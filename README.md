@@ -6,6 +6,7 @@ AI PDP Generator is a sophisticated web application designed to help students an
 ![React](https://img.shields.io/badge/React-19-blue)
 ![Vite](https://img.shields.io/badge/Vite-8-purple)
 ![Gemini AI](https://img.shields.io/badge/AI-Gemini%20Flash-orange)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1e57a70c-f13a-44ba-956f-3e48eeadedd8/deploy-status)](https://app.netlify.com/projects/pdp-gen/deploys)
 
 ## ✨ Features
 
