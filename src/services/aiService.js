@@ -8,7 +8,7 @@ import samplePDP from "../data/personal_development_planfor_sample.md?raw";
 
 export const generatePDP = async (userAnswers) => {
   try {
-    const response = await fetch("/api/gemini", {
+    const response = await fetch("/api/openrouter", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export const generatePDP = async (userAnswers) => {
 
 export const generatePDPStream = async function* (userAnswers, model) {
   try {
-    const response = await fetch("/api/gemini", {
+    const response = await fetch("/api/openrouter", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
