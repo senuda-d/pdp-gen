@@ -2,59 +2,50 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Info, ChevronDown, Check, Bot } from "lucide-react";
 import data from "../data/questions.json";
+import sampleData from "../data/sampleData.json";
 
 const getProviderLogo = (modelId) => {
   if (!modelId) return null;
   const id = modelId.toLowerCase();
   
+  // Standard Providers
   if (id.includes('google') || id.includes('gemma')) return "https://api.iconify.design/logos:google-icon.svg";
   if (id.includes('meta') || id.includes('llama')) return "https://api.iconify.design/logos:meta-icon.svg";
   if (id.includes('openai') || id.includes('gpt')) return "https://api.iconify.design/logos:openai-icon.svg";
-  if (id.includes('mistral') || id.includes('mixtral')) return "https://api.iconify.design/logos:mistral-icon.svg";
+  if (id.includes('mistral') || id.includes('mixtral')) return "https://api.iconify.design/logos:mistral-ai.svg";
   if (id.includes('anthropic') || id.includes('claude')) return "https://api.iconify.design/logos:anthropic-icon.svg";
   if (id.includes('cohere')) return "https://api.iconify.design/logos:cohere-icon.svg";
   if (id.includes('huggingface')) return "https://api.iconify.design/logos:huggingface-icon.svg";
-  
-  // Custom precise icons
-  if (id.includes('qwen')) return "https://qianwen-res.oss-cn-beijing.aliyuncs.com/logo_qwen.svg";
-  if (id.includes('deepseek')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/DeepSeek_logo.svg/512px-DeepSeek_logo.svg.png";
-  if (id.includes('microsoft')) return "https://api.iconify.design/logos:microsoft-icon.svg";
+  if (id.includes('microsoft') || id.includes('phi')) return "https://api.iconify.design/logos:microsoft-icon.svg";
+  if (id.includes('nvidia') || id.includes('nemotron')) return "https://api.iconify.design/logos:nvidia.svg";
   if (id.includes('x-ai') || id.includes('grok')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/512px-X_logo_2023.svg.png";
+
+  // Specialized Providers (using Iconify or reliable CDNs to avoid ORB blocks)
+  if (id.includes('venice')) return "https://api.iconify.design/logos:mistral-ai.svg"; // Venice usually uses Mistral
+  if (id.includes('qwen')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Qwen_logo.svg/3840px-Qwen_logo.svg.png"; 
+  if (id.includes('glm') || id.includes('zhipu') || id.includes('z-ai')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Z.ai_%28company_logo%29.svg/250px-Z.ai_%28company_logo%29.svg.png";
+  if (id.includes('deepseek')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/DeepSeek_logo.svg/512px-DeepSeek_logo.svg.png";
+  
+  // Fallbacks for niche providers
+  if (id.includes('arcee')) return "https://i.tracxn.com/logo/company/arcee_ai_3e7e1235-f8cd-418a-a3d0-6c4403f77245";
+  if (id.includes('liquid')) return "https://ik.imagekit.io/parallel/employee/prl-c__4h-Desy0";
+  if (id.includes('stepfun') || id.includes('step-')) return "https://www.stepfun.com/favicon.ico";
+  if (id.includes('minimax')) return "https://www.minimaxi.com/favicon.ico";
 
   return null; // Signals we should use the Lucide Bot fallback
 };
 
 function FormPage() {
   const navigate = useNavigate();
-  const [answers, setAnswers] = useState({
-    "1": "Kamal",
-    "2": "20",
-    "3": "Colombo, Sri Lanka",
-    "4": "BSc in IT at SLIIT (in progress)",
-    "5": "Introverted, analytical, calm, and highly focused on growth.",
-    "6": "Integrity, continuous learning, and contributing to the community.",
-    "7": "Through hands-on projects, technical blogs, and YouTube tutorials.",
-    "8": "Obtain a high-quality internship in full-stack development by next year.",
-    "9": "Become a senior software engineer specializing in AI and distributed systems.",
-    "10": "Full-stack developer / AI Engineer",
-    "11": "Java, Python, React, problem-solving, and system design.",
-    "12": "Communication skills, backend architecture, and time management.",
-    "13": "Built a comprehensive vehicle management system and a PDP generator.",
-    "14": "Balancing academic work with personal projects and business handling.",
-    "15": "Limited mentorship opportunities in the local tech scene.",
-    "16": "University mentors, tech communities, and peer groups.",
-    "17": "1 year",
-    "18": "Focus on tech stacks, soft skills, and personal finance.",
-    "19": "it241000000",
-    "20": "Specializing in Data Science",
-    "21": "32 33 19",
-    "22": "2",
-    "23": "Actively engaged in personal web development projects, leading small collaborative teams.",
-    "24": "Hands-on experience across frontend and backend development.",
-    "25": "Contributed to academic and personal projects spanning web application development.",
-    "26": "Ongoing education in Information Technology (BSc in IT at SLIIT) with practical skills in modern web technologies and active participation in peer study groups and mentorship networks.",
-    "27": "1 year 2 semester"
+  const [answers, setAnswers] = useState(() => {
+    const saved = localStorage.getItem("pdp_answers");
+    return saved ? JSON.parse(saved) : sampleData;
   });
+  // Persist answers to local storage
+  useEffect(() => {
+    localStorage.setItem("pdp_answers", JSON.stringify(answers));
+  }, [answers]);
+
   const [error, setError] = useState("");
   const [models, setModels] = useState([]);
   const [selectedModel, setSelectedModel] = useState("google/gemini-2.5-flash:free");
@@ -81,7 +72,7 @@ function FormPage() {
             .filter(m => m.pricing && m.pricing.prompt === "0" && m.pricing.completion === "0")
             .map(m => ({ id: m.id, name: m.name }));
           setModels(freeModels);
-          
+
           // Only change default if the currently selected one turns out to not be free.
           // Wait, actually Google Gemini 2.5 Flash Free is a great default if it exists.
           const hasDefault = freeModels.some(m => m.id === "google/gemini-2.5-flash:free");
@@ -97,38 +88,6 @@ function FormPage() {
     setAnswers({
       ...answers,
       [key]: value,
-    });
-  };
-
-  const fillTestData = () => {
-    setAnswers({
-      "1": "John Doe",
-      "2": "25",
-      "3": "London, UK",
-      "4": "BSc in Computer Science (Graduate)",
-      "5": "Extroverted, team player, creative, and proactive.",
-      "6": "Innovation, transparency, and social responsibility.",
-      "7": "Group discussions, interactive courses, and building prototypes.",
-      "8": "Securing a junior developer role in a fintech company.",
-      "9": "Leading a product development team in a global tech firm.",
-      "10": "Frontend Developer",
-      "11": "JavaScript, TypeScript, CSS, UI/UX design.",
-      "12": "Public speaking, Node.js, and data structures.",
-      "13": "Redesigned a non-profit website; built a task manager app.",
-      "14": "Finding the right balance between speed and code quality.",
-      "15": "Fast-paced changes in the frontend landscape.",
-      "16": "Online tech forums, local meetups, and family.",
-      "17": "2 years",
-      "18": "Advanced React patterns, leadership skills, and fitness.",
-      "19": "it241000000",
-      "20": "Specializing in Data Science",
-      "21": "32 33 19",
-      "22": "2",
-      "23": "Actively engaged in personal web development projects, leading small collaborative teams.",
-      "24": "Hands-on experience across frontend and backend development.",
-      "25": "Contributed to academic and personal projects spanning web application development.",
-      "26": "Ongoing education in Information Technology (BSc in IT at SLIIT) with practical skills in modern web technologies and active participation in peer study groups and mentorship networks.",
-      "27": "1 year 2 semester"
     });
   };
 
@@ -158,12 +117,12 @@ function FormPage() {
       <header className="header">
         <h1 className="title">AI PDP Generator</h1>
         <p className="subtitle">Answer a few questions and let AI craft your Personal Development Plan.</p>
-        
+
         <div className="quota-banner fadeIn">
           <Info size={18} className="info-icon" />
           <p>
-            <strong>Api Usage Note:</strong> Some models might not be working right now. 
-            If your generation fails, please try selecting a different model from the list. Sorry for the inconvenience!
+            <strong>Api Usage Note:</strong> Some models might reach their limits or exhibit temporary issues.
+            If your generation fails, don't worry! We save all your inputs locally so you can simply select a different model and try again without re-entering anything.
           </p>
         </div>
       </header>
@@ -209,8 +168,8 @@ function FormPage() {
       <div className="actions" style={{ flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
         <div style={{ width: '100%', maxWidth: '450px', display: 'flex', flexDirection: 'column', gap: '8px', zIndex: 10 }}>
           <label style={{ fontWeight: 600, color: '#333' }}>Select AI Model for Generation:</label>
-          
-          <div 
+
+          <div
             ref={dropdownRef}
             style={{ position: 'relative', width: '100%' }}
           >
@@ -227,25 +186,25 @@ function FormPage() {
               onBlur={(e) => e.target.style.borderColor = '#e0e0e0'}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', overflow: 'hidden' }}>
-                 {(() => {
-                    const activeModelObj = models.find(m => m.id === selectedModel);
-                    if (!activeModelObj) {
-                       return <><Bot size={20} color="#666" /> <span>Loading free models...</span></>;
-                    }
-                    const logoUrl = getProviderLogo(activeModelObj.id);
-                    return (
-                      <>
-                        {logoUrl ? (
-                          <img src={logoUrl} alt={activeModelObj.name} style={{ width: 20, height: 20, objectFit: 'contain' }} />
-                        ) : (
-                          <Bot size={20} color="#6c63ff" />
-                        )}
-                        <span style={{ fontSize: '0.95rem', fontWeight: 500, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                          {activeModelObj.name || activeModelObj.id}
-                        </span>
-                      </>
-                    );
-                 })()}
+                {(() => {
+                  const activeModelObj = models.find(m => m.id === selectedModel);
+                  if (!activeModelObj) {
+                    return <><Bot size={20} color="#666" /> <span>Loading free models...</span></>;
+                  }
+                  const logoUrl = getProviderLogo(activeModelObj.id);
+                  return (
+                    <>
+                      {logoUrl ? (
+                        <img src={logoUrl} alt={activeModelObj.name} style={{ width: 20, height: 20, objectFit: 'contain' }} />
+                      ) : (
+                        <Bot size={20} color="#6c63ff" />
+                      )}
+                      <span style={{ fontSize: '0.95rem', fontWeight: 500, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                        {activeModelObj.name || activeModelObj.id}
+                      </span>
+                    </>
+                  );
+                })()}
               </div>
               <ChevronDown size={18} color="#666" style={{ transform: isDropdownOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
             </button>
@@ -273,10 +232,10 @@ function FormPage() {
                         cursor: 'pointer', textAlign: 'left', transition: 'background 0.1s'
                       }}
                       onMouseOver={(e) => {
-                         if(!isSelected) e.currentTarget.style.background = '#f5f5f5';
+                        if (!isSelected) e.currentTarget.style.background = '#f5f5f5';
                       }}
                       onMouseOut={(e) => {
-                         if(!isSelected) e.currentTarget.style.background = 'transparent';
+                        if (!isSelected) e.currentTarget.style.background = 'transparent';
                       }}
                     >
                       {logoUrl ? (
@@ -284,7 +243,7 @@ function FormPage() {
                       ) : (
                         <Bot size={20} color={isSelected ? "#6c63ff" : "#666"} />
                       )}
-                      
+
                       <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
                         <span style={{ fontSize: '0.95rem', fontWeight: isSelected ? 600 : 500, color: isSelected ? '#6c63ff' : '#333' }}>
                           {m.name || m.id}
@@ -293,7 +252,7 @@ function FormPage() {
                           {m.id.split(':')[0]}
                         </span>
                       </div>
-                      
+
                       {isSelected && <Check size={18} color="#6c63ff" />}
                     </button>
                   );
@@ -304,8 +263,7 @@ function FormPage() {
         </div>
 
         <div className="test-controls" style={{ marginTop: '0' }}>
-          <button className="secondary-btn" onClick={fillTestData}>Load Another Sample</button>
-          <button className="secondary-btn" onClick={() => setAnswers({})}>Clear All</button>
+          <button className="secondary-btn" onClick={() => setAnswers({})}>Clear All Inputs</button>
         </div>
 
         <button

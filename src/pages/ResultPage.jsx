@@ -9,18 +9,29 @@ const getProviderLogo = (modelId) => {
   if (!modelId) return null;
   const id = modelId.toLowerCase();
 
+  // Standard Providers
   if (id.includes('google') || id.includes('gemma')) return "https://api.iconify.design/logos:google-icon.svg";
   if (id.includes('meta') || id.includes('llama')) return "https://api.iconify.design/logos:meta-icon.svg";
   if (id.includes('openai') || id.includes('gpt')) return "https://api.iconify.design/logos:openai-icon.svg";
-  if (id.includes('mistral') || id.includes('mixtral')) return "https://api.iconify.design/logos:mistral-icon.svg";
+  if (id.includes('mistral') || id.includes('mixtral')) return "https://api.iconify.design/logos:mistral-ai.svg";
   if (id.includes('anthropic') || id.includes('claude')) return "https://api.iconify.design/logos:anthropic-icon.svg";
   if (id.includes('cohere')) return "https://api.iconify.design/logos:cohere-icon.svg";
   if (id.includes('huggingface')) return "https://api.iconify.design/logos:huggingface-icon.svg";
-
-  if (id.includes('qwen')) return "https://qianwen-res.oss-cn-beijing.aliyuncs.com/logo_qwen.svg";
-  if (id.includes('deepseek')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/DeepSeek_logo.svg/512px-DeepSeek_logo.svg.png";
-  if (id.includes('microsoft')) return "https://api.iconify.design/logos:microsoft-icon.svg";
+  if (id.includes('microsoft') || id.includes('phi')) return "https://api.iconify.design/logos:microsoft-icon.svg";
+  if (id.includes('nvidia') || id.includes('nemotron')) return "https://api.iconify.design/logos:nvidia.svg";
   if (id.includes('x-ai') || id.includes('grok')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/512px-X_logo_2023.svg.png";
+
+  // Specialized Providers (using Iconify or reliable CDNs to avoid ORB blocks)
+  if (id.includes('venice')) return "https://api.iconify.design/logos:mistral-ai.svg"; // Venice usually uses Mistral
+  if (id.includes('qwen')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Qwen_logo.svg/3840px-Qwen_logo.svg.png";
+  if (id.includes('glm') || id.includes('zhipu') || id.includes('z-ai')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Z.ai_%28company_logo%29.svg/250px-Z.ai_%28company_logo%29.svg.png";
+  if (id.includes('deepseek')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/DeepSeek_logo.svg/512px-DeepSeek_logo.svg.png";
+
+  // Fallbacks for niche providers
+  if (id.includes('arcee')) return "https://i.tracxn.com/logo/company/arcee_ai_3e7e1235-f8cd-418a-a3d0-6c4403f77245";
+  if (id.includes('liquid')) return "https://ik.imagekit.io/parallel/employee/prl-c__4h-Desy0";
+  if (id.includes('stepfun') || id.includes('step-')) return "https://www.stepfun.com/favicon.ico";
+  if (id.includes('minimax')) return "https://www.minimaxi.com/favicon.ico";
 
   return null;
 };
@@ -172,21 +183,26 @@ function ResultPage() {
             ? "quota-error-card fadeIn"
             : "error-message"
         }>
-          {(error.toLowerCase().includes("quota") || error.includes("429") || error.toLowerCase().includes("limit")) ? (
+          {(error.toLowerCase().includes("quota") || error.includes("429") || error.toLowerCase().includes("limit") || error.toLowerCase().includes("failed")) ? (
             <div className="quota-content">
               <div className="quota-icon-wrapper">
                 <AlertTriangle size={32} />
               </div>
               <div className="quota-info">
-                <h3>Model Generation Failed</h3>
-                <p>Some models might not be working right now. If your selected model failed, please try choosing a different one from the list.</p>
+                <h3>Oops, we ran into an error!</h3>
+                <p>If you think it's an issue with the model you selected, just select another one and try again, buddy!</p>
                 <div className="quota-notice">
                   <Clock size={16} />
-                  <span>Sorry for the inconvenience. Return to the form to select a different model.</span>
+                  <span>Don't worry, we got you! We saved all your data locally. If you're feeling exhausted, come back later; your progress is safe with us. Or, just go back and pick a different model to retry!</span>
                 </div>
-                <button className="secondary-btn" onClick={() => navigate("/")} style={{ marginTop: '1.5rem', width: '100%' }}>
-                  Return to Home
-                </button>
+                <div style={{ display: 'flex', gap: '12px', marginTop: '1.5rem' }}>
+                  <button className="secondary-btn" onClick={() => navigate("/")} style={{ flex: 1 }}>
+                    Pick Another Model & Retry
+                  </button>
+                  <button className="secondary-btn" onClick={() => navigate("/")} style={{ flex: 1, backgroundColor: '#f0f0f0', border: 'none' }}>
+                    Take a Break
+                  </button>
+                </div>
               </div>
             </div>
           ) : (
