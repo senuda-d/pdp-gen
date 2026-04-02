@@ -179,7 +179,12 @@ function FormPage() {
                             }
                           }
 
-                          const update = (obj) => handleChange(item.id, { ...obj, type: 'kpc-result' });
+                          const update = (obj) => {
+                            const newK = parseInt(obj.k) || 0;
+                            const newP = parseInt(obj.p) || 0;
+                            const newC = parseInt(obj.c) || 0;
+                            handleChange(item.id, { ...obj, total: newK + newP + newC, type: 'kpc-result' });
+                          };
 
                           return (
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
