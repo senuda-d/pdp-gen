@@ -6,6 +6,9 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./App.css";
 
+import KpcPage from "./pages/KpcPage";
+import LocusPage from "./pages/LocusPage";
+
 function App() {
   return (
     <Router>
@@ -15,6 +18,8 @@ function App() {
           <Routes>
             <Route path="/" element={<FormPage />} />
             <Route path="/result" element={<ResultPage />} />
+            <Route path="/kpc" element={<KpcPage />} />
+            <Route path="/locus" element={<LocusPage />} />
           </Routes>
         </div>
         <Footer />

@@ -1,0 +1,167 @@
+{
+    "assessment": "PsyCap (KPC) Assessment",
+    "description": "Measures Psychological Capital across 4 dimensions: Hope, Efficacy, Resilience, Optimism",
+    "scale": {
+        "type": "likert",
+        "min": 1,
+        "max": 6,
+        "labels": {
+            "1": "Strongly Disagree",
+            "2": "Disagree",
+            "3": "Somewhat Disagree",
+            "4": "Somewhat Agree",
+            "5": "Agree",
+            "6": "Strongly Agree"
+        }
+    },
+    "scoring": {
+        "method": "sum_per_dimension",
+        "reverse_scored_questions": [
+            "Q12"
+        ],
+        "reverse_formula": "7 - answer",
+        "dimension_score_range": {
+            "min": 3,
+            "max": 18
+        },
+        "total_score_range": {
+            "min": 12,
+            "max": 72
+        },
+        "interpretation": {
+            "per_dimension": {
+                "low": "3–9",
+                "moderate": "10–13",
+                "high": "14–18"
+            },
+            "total": {
+                "low": "12–35",
+                "moderate": "36–53",
+                "high": "54–72"
+            }
+        }
+    },
+    "questions": [
+        {
+            "id": "Q1",
+            "dimension": "Hope",
+            "text": "I can think of many ways to get out of a tough situation.",
+            "example_answer": {
+                "value": 6,
+                "label": "Strongly Agree",
+                "explanation": "I always find alternative routes when I hit a dead end."
+            }
+        },
+        {
+            "id": "Q2",
+            "dimension": "Hope",
+            "text": "Right now, I am energetically pursuing my goals.",
+            "example_answer": {
+                "value": 4,
+                "label": "Somewhat Agree",
+                "explanation": "I am actively working toward what I want but sometimes lose momentum."
+            }
+        },
+        {
+            "id": "Q3",
+            "dimension": "Hope",
+            "text": "There are lots of ways around any problem I face.",
+            "example_answer": {
+                "value": 5,
+                "label": "Agree",
+                "explanation": "I rarely feel stuck because I can usually see multiple options."
+            }
+        },
+        {
+            "id": "Q4",
+            "dimension": "Efficacy",
+            "text": "I feel confident helping to set targets and goals in my work or daily life.",
+            "example_answer": {
+                "value": 5,
+                "label": "Agree",
+                "explanation": "I am comfortable defining what I want to achieve and how to get there."
+            }
+        },
+        {
+            "id": "Q5",
+            "dimension": "Efficacy",
+            "text": "I feel confident presenting information to a group of people.",
+            "example_answer": {
+                "value": 3,
+                "label": "Somewhat Disagree",
+                "explanation": "Public situations make me unsure of myself and I often stumble."
+            }
+        },
+        {
+            "id": "Q6",
+            "dimension": "Efficacy",
+            "text": "I feel confident contributing to discussions about strategy or direction.",
+            "example_answer": {
+                "value": 4,
+                "label": "Somewhat Agree",
+                "explanation": "I share my views in group settings, though I sometimes second-guess myself."
+            }
+        },
+        {
+            "id": "Q7",
+            "dimension": "Resilience",
+            "text": "When things are uncertain, I usually expect the best.",
+            "example_answer": {
+                "value": 4,
+                "label": "Somewhat Agree",
+                "explanation": "I lean toward hoping things work out even when the outcome is unclear."
+            }
+        },
+        {
+            "id": "Q8",
+            "dimension": "Resilience",
+            "text": "I can get through difficult times because I have experienced difficulty before.",
+            "example_answer": {
+                "value": 6,
+                "label": "Strongly Agree",
+                "explanation": "Past hardships have made me more confident in my ability to recover."
+            }
+        },
+        {
+            "id": "Q9",
+            "dimension": "Resilience",
+            "text": "I feel like I can handle many things at a time when they come my way.",
+            "example_answer": {
+                "value": 3,
+                "label": "Somewhat Disagree",
+                "explanation": "I tend to feel overwhelmed when multiple challenges hit at the same time."
+            }
+        },
+        {
+            "id": "Q10",
+            "dimension": "Optimism",
+            "text": "I always look on the bright side of things regarding my work and life.",
+            "example_answer": {
+                "value": 5,
+                "label": "Agree",
+                "explanation": "Even in bad situations I try to find something positive to hold onto."
+            }
+        },
+        {
+            "id": "Q11",
+            "dimension": "Optimism",
+            "text": "I am optimistic about what will happen to me in the future.",
+            "example_answer": {
+                "value": 4,
+                "label": "Somewhat Agree",
+                "explanation": "I generally believe things will turn out well for me over time."
+            }
+        },
+        {
+            "id": "Q12",
+            "dimension": "Optimism",
+            "reverse_scored": true,
+            "text": "In this area of my life, things never work out the way I want them to.",
+            "example_answer": {
+                "value": 2,
+                "label": "Disagree",
+                "explanation": "Things usually do work out for me, so I disagree with this negative statement. Reverse scored: 7 - 2 = 5."
+            }
+        }
+    ]
+}

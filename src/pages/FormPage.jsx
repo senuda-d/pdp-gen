@@ -7,7 +7,7 @@ import sampleData from "../data/sampleData.json";
 const getProviderLogo = (modelId) => {
   if (!modelId) return null;
   const id = modelId.toLowerCase();
-  
+
   // Standard Providers
   if (id.includes('google') || id.includes('gemma')) return "https://api.iconify.design/logos:google-icon.svg";
   if (id.includes('meta') || id.includes('llama')) return "https://api.iconify.design/logos:meta-icon.svg";
@@ -22,10 +22,10 @@ const getProviderLogo = (modelId) => {
 
   // Specialized Providers (using Iconify or reliable CDNs to avoid ORB blocks)
   if (id.includes('venice')) return "https://api.iconify.design/logos:mistral-ai.svg"; // Venice usually uses Mistral
-  if (id.includes('qwen')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Qwen_logo.svg/3840px-Qwen_logo.svg.png"; 
+  if (id.includes('qwen')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Qwen_logo.svg/3840px-Qwen_logo.svg.png";
   if (id.includes('glm') || id.includes('zhipu') || id.includes('z-ai')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Z.ai_%28company_logo%29.svg/250px-Z.ai_%28company_logo%29.svg.png";
   if (id.includes('deepseek')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/DeepSeek_logo.svg/512px-DeepSeek_logo.svg.png";
-  
+
   // Fallbacks for niche providers
   if (id.includes('arcee')) return "https://i.tracxn.com/logo/company/arcee_ai_3e7e1235-f8cd-418a-a3d0-6c4403f77245";
   if (id.includes('liquid')) return "https://ik.imagekit.io/parallel/employee/prl-c__4h-Desy0";
@@ -104,7 +104,11 @@ function FormPage() {
     data.questions.forEach((section) => {
       section.items.forEach((item) => {
         if (answers[item.id]) {
-          userResponses[item.question] = answers[item.id];
+          let ans = answers[item.id];
+          if (typeof ans === 'object') {
+            ans = `K: ${ans.k || "-"}, P: ${ans.p || "-"}, C: ${ans.c || "-"}`;
+          }
+          userResponses[item.question] = ans;
         }
       });
     });
@@ -137,24 +141,88 @@ function FormPage() {
                 <div key={item.id} className="form-group">
                   <label>{item.question}</label>
 
-                  {item.type === "input" ? (
-                    <input
-                      type="text"
-                      placeholder={item.placeholder}
-                      value={answers[item.id] || ""}
-                      onChange={(e) =>
-                        handleChange(item.id, e.target.value)
-                      }
-                    />
+                  {item.id === 21 || item.id === 22 ? (
+                    <div style={{ display: "flex", gap: "10px", alignItems: "flex-start", width: "100%", flexWrap: "wrap" }}>
+                      <div style={{ flex: 1, width: "100%", minWidth: "250px" }}>
+                        {item.id === 21 ? (() => {
+                          let val = answers[item.id];
+                          let k = "", p = "", c = "";
+                          if (typeof val === "object" && val !== null) {
+                            k = val.k || ""; p = val.p || ""; c = val.c || "";
+                          } else if (typeof val === "string") {
+                            let parts = val.split(" ");
+                            if (parts.length >= 3 && !val.includes("Total:")) {
+                              k = parts[0]; p = parts[1]; c = parts.slice(2).join(" ");
+                            } else {
+                              k = val;
+                            }
+                          }
+                          return (
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%' }}>
+                              <input
+                                type="text"
+                                placeholder="K Value"
+                                value={k}
+                                onChange={(e) => handleChange(item.id, { k: e.target.value, p, c })}
+                                style={{ width: '100%' }}
+                              />
+                              <input
+                                type="text"
+                                placeholder="P Value"
+                                value={p}
+                                onChange={(e) => handleChange(item.id, { k, p: e.target.value, c })}
+                                style={{ width: '100%' }}
+                              />
+                              <input
+                                type="text"
+                                placeholder="C Value"
+                                value={c}
+                                onChange={(e) => handleChange(item.id, { k, p, c: e.target.value })}
+                                style={{ width: '100%' }}
+                              />
+                            </div>
+                          );
+                        })() : item.type === "input" ? (
+                          <input
+                            type="text"
+                            placeholder={item.placeholder}
+                            value={answers[item.id] || ""}
+                            onChange={(e) => handleChange(item.id, e.target.value)}
+                          />
+                        ) : (
+                          <textarea
+                            rows="3"
+                            placeholder={item.placeholder}
+                            value={answers[item.id] || ""}
+                            onChange={(e) => handleChange(item.id, e.target.value)}
+                          />
+                        )}
+                      </div>
+                      {item.id === 21 && (
+                        <button type="button" className="secondary-btn" onClick={() => navigate('/kpc')} style={{ whiteSpace: "nowrap", padding: "12px 20px", height: "fit-content" }}>Calculate KPC</button>
+                      )}
+                      {item.id === 22 && (
+                        <button type="button" className="secondary-btn" onClick={() => navigate('/locus')} style={{ whiteSpace: "nowrap", padding: "12px 20px", height: "fit-content" }}>Calculate Locus</button>
+                      )}
+                    </div>
                   ) : (
-                    <textarea
-                      rows="3"
-                      placeholder={item.placeholder}
-                      value={answers[item.id] || ""}
-                      onChange={(e) =>
-                        handleChange(item.id, e.target.value)
-                      }
-                    />
+                    <>
+                      {item.type === "input" ? (
+                        <input
+                          type="text"
+                          placeholder={item.placeholder}
+                          value={answers[item.id] || ""}
+                          onChange={(e) => handleChange(item.id, e.target.value)}
+                        />
+                      ) : (
+                        <textarea
+                          rows="3"
+                          placeholder={item.placeholder}
+                          value={answers[item.id] || ""}
+                          onChange={(e) => handleChange(item.id, e.target.value)}
+                        />
+                      )}
+                    </>
                   )}
                 </div>
               ))}

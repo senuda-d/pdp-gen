@@ -1,0 +1,211 @@
+{
+    "assessment": "Locus of Control Assessment",
+    "description": "Measures whether a person believes outcomes are controlled internally (by themselves) or externally (by luck, chance, or others). Based on Rotter's I-E Scale (1966).",
+    "scale": {
+        "type": "forced_choice",
+        "options": [
+            "A",
+            "B"
+        ],
+        "scoring_option": "B",
+        "scoring_note": "Each B answer scores 1 point. Total B count = external locus score."
+    },
+    "scoring": {
+        "method": "count_external_answers",
+        "external_answer": "B",
+        "total_score_range": {
+            "min": 0,
+            "max": 9
+        },
+        "interpretation": {
+            "internal": {
+                "range": "0–3",
+                "label": "Internal Locus of Control",
+                "description": "Strong belief in personal control over life outcomes."
+            },
+            "mixed": {
+                "range": "4–6",
+                "label": "Mixed Locus of Control",
+                "description": "Control beliefs vary depending on the situation."
+            },
+            "external": {
+                "range": "7–9",
+                "label": "External Locus of Control",
+                "description": "Outcomes are largely attributed to luck, chance, or other people."
+            }
+        }
+    },
+    "questions": [
+        {
+            "id": "Q1",
+            "category": "Life Outcomes",
+            "options": {
+                "A": {
+                    "text": "People's failures are mostly the result of their own mistakes.",
+                    "type": "internal"
+                },
+                "B": {
+                    "text": "Many failures happen due to bad luck beyond a person's control.",
+                    "type": "external"
+                }
+            },
+            "example_answer": {
+                "choice": "A",
+                "type": "internal",
+                "explanation": "I believe most outcomes follow from the choices a person makes."
+            }
+        },
+        {
+            "id": "Q2",
+            "category": "Life Outcomes",
+            "options": {
+                "A": {
+                    "text": "In the long run, people get the respect they deserve.",
+                    "type": "internal"
+                },
+                "B": {
+                    "text": "A person's worth often goes unrecognized no matter how hard they try.",
+                    "type": "external"
+                }
+            },
+            "example_answer": {
+                "choice": "B",
+                "type": "external",
+                "explanation": "I feel that recognition depends heavily on who is watching, not just effort."
+            }
+        },
+        {
+            "id": "Q3",
+            "category": "Planning & Control",
+            "options": {
+                "A": {
+                    "text": "When I make plans, I am almost certain I can make them work.",
+                    "type": "internal"
+                },
+                "B": {
+                    "text": "It is not always wise to plan too far ahead since many things depend on chance.",
+                    "type": "external"
+                }
+            },
+            "example_answer": {
+                "choice": "A",
+                "type": "internal",
+                "explanation": "I trust my ability to execute a plan once I commit to it."
+            }
+        },
+        {
+            "id": "Q4",
+            "category": "Success & Achievement",
+            "options": {
+                "A": {
+                    "text": "Becoming a success is a matter of hard work — luck has little or nothing to do with it.",
+                    "type": "internal"
+                },
+                "B": {
+                    "text": "Getting a good opportunity depends mainly on being in the right place at the right time.",
+                    "type": "external"
+                }
+            },
+            "example_answer": {
+                "choice": "A",
+                "type": "internal",
+                "explanation": "I believe consistent effort is the main driver of success in my life."
+            }
+        },
+        {
+            "id": "Q5",
+            "category": "Success & Achievement",
+            "options": {
+                "A": {
+                    "text": "The results I get are directly related to how much effort I put in.",
+                    "type": "internal"
+                },
+                "B": {
+                    "text": "Sometimes I cannot understand how evaluators or decision-makers arrive at their conclusions.",
+                    "type": "external"
+                }
+            },
+            "example_answer": {
+                "choice": "B",
+                "type": "external",
+                "explanation": "I often feel results are unpredictable regardless of how prepared I am."
+            }
+        },
+        {
+            "id": "Q6",
+            "category": "Success & Achievement",
+            "options": {
+                "A": {
+                    "text": "I am the master of my own fate.",
+                    "type": "internal"
+                },
+                "B": {
+                    "text": "A great deal of what happens to me is probably just a matter of chance.",
+                    "type": "external"
+                }
+            },
+            "example_answer": {
+                "choice": "A",
+                "type": "internal",
+                "explanation": "I strongly feel my decisions shape the direction of my life."
+            }
+        },
+        {
+            "id": "Q7",
+            "category": "Relationships & Society",
+            "options": {
+                "A": {
+                    "text": "People are lonely because they do not try hard enough to be friendly.",
+                    "type": "internal"
+                },
+                "B": {
+                    "text": "There is not much use in trying too hard to please people — if they like you, they like you.",
+                    "type": "external"
+                }
+            },
+            "example_answer": {
+                "choice": "A",
+                "type": "internal",
+                "explanation": "I think social connections are built through consistent effort and openness."
+            }
+        },
+        {
+            "id": "Q8",
+            "category": "Relationships & Society",
+            "options": {
+                "A": {
+                    "text": "What happens to me is my own doing.",
+                    "type": "internal"
+                },
+                "B": {
+                    "text": "Sometimes I feel I do not have enough control over the direction my life is taking.",
+                    "type": "external"
+                }
+            },
+            "example_answer": {
+                "choice": "B",
+                "type": "external",
+                "explanation": "I sometimes feel like life is happening to me rather than because of me."
+            }
+        },
+        {
+            "id": "Q9",
+            "category": "Relationships & Society",
+            "options": {
+                "A": {
+                    "text": "With enough effort, people can bring about meaningful change in society.",
+                    "type": "internal"
+                },
+                "B": {
+                    "text": "It is difficult for ordinary people to have much control over what powerful institutions do.",
+                    "type": "external"
+                }
+            },
+            "example_answer": {
+                "choice": "B",
+                "type": "external",
+                "explanation": "I feel that large systems operate independently of individual influence."
+            }
+        }
+    ]
+}
