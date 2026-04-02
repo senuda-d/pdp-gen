@@ -7,7 +7,7 @@ import sampleData from "../data/sampleData.json";
 const getProviderLogo = (modelId) => {
   if (!modelId) return null;
   const id = modelId.toLowerCase();
-  
+
   // Standard Providers
   if (id.includes('google') || id.includes('gemma')) return "https://api.iconify.design/logos:google-icon.svg";
   if (id.includes('meta') || id.includes('llama')) return "https://api.iconify.design/logos:meta-icon.svg";
@@ -22,10 +22,10 @@ const getProviderLogo = (modelId) => {
 
   // Specialized Providers (using Iconify or reliable CDNs to avoid ORB blocks)
   if (id.includes('venice')) return "https://api.iconify.design/logos:mistral-ai.svg"; // Venice usually uses Mistral
-  if (id.includes('qwen')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Qwen_logo.svg/3840px-Qwen_logo.svg.png"; 
+  if (id.includes('qwen')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Qwen_logo.svg/3840px-Qwen_logo.svg.png";
   if (id.includes('glm') || id.includes('zhipu') || id.includes('z-ai')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Z.ai_%28company_logo%29.svg/250px-Z.ai_%28company_logo%29.svg.png";
   if (id.includes('deepseek')) return "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/DeepSeek_logo.svg/512px-DeepSeek_logo.svg.png";
-  
+
   // Fallbacks for niche providers
   if (id.includes('arcee')) return "https://i.tracxn.com/logo/company/arcee_ai_3e7e1235-f8cd-418a-a3d0-6c4403f77245";
   if (id.includes('liquid')) return "https://ik.imagekit.io/parallel/employee/prl-c__4h-Desy0";
@@ -104,7 +104,17 @@ function FormPage() {
     data.questions.forEach((section) => {
       section.items.forEach((item) => {
         if (answers[item.id]) {
-          userResponses[item.question] = answers[item.id];
+          let ans = answers[item.id];
+          if (typeof ans === 'object' && ans !== null) {
+            if (ans.type === 'kpc-result') {
+              ans = `Knowledge: ${ans.k || 0}, Personality: ${ans.p || 0}, Character: ${ans.c || 0} (Total: ${ans.total || 0})`;
+            } else if (ans.type === 'psycap-result') {
+              ans = `Hope: ${ans.hope || 0}, Efficacy: ${ans.efficacy || 0}, Resilience: ${ans.resilience || 0}, Optimism: ${ans.optimism || 0}`;
+            } else {
+              ans = `K: ${ans.k || "-"}, P: ${ans.p || "-"}, C: ${ans.c || "-"}`;
+            }
+          }
+          userResponses[item.question] = ans;
         }
       });
     });
@@ -137,24 +147,114 @@ function FormPage() {
                 <div key={item.id} className="form-group">
                   <label>{item.question}</label>
 
-                  {item.type === "input" ? (
-                    <input
-                      type="text"
-                      placeholder={item.placeholder}
-                      value={answers[item.id] || ""}
-                      onChange={(e) =>
-                        handleChange(item.id, e.target.value)
-                      }
-                    />
+                  {item.id === 21 || item.id === 22 ? (
+                    <div style={{ 
+                      display: "flex", 
+                      flexDirection: "row", 
+                      gap: "16px", 
+                      alignItems: "flex-start", 
+                      width: "100%", 
+                      flexWrap: "wrap" 
+                    }}>
+                      <div style={{ flex: "1 1 300px" }}>
+                        {item.id === 21 ? (() => {
+                          let val = answers[item.id];
+                          let k = "", p = "", c = "";
+                          
+                          if (typeof val === "object" && val !== null) {
+                            if (val.type === 'kpc-result') {
+                              k = val.k || ""; p = val.p || ""; c = val.c || "";
+                            } else {
+                              // migration from early psycap attempt
+                              k = val.hope || val.k || ""; 
+                              p = val.efficacy || val.p || ""; 
+                              c = val.resilience || val.c || "";
+                            }
+                          } else if (typeof val === "string") {
+                            let parts = val.split(" ").filter(s => s.trim());
+                            if (parts.length >= 3) {
+                              k = parts[0]; p = parts[1]; c = parts[2];
+                            } else {
+                              k = val;
+                            }
+                          }
+
+                          const update = (obj) => {
+                            const newK = parseInt(obj.k) || 0;
+                            const newP = parseInt(obj.p) || 0;
+                            const newC = parseInt(obj.c) || 0;
+                            handleChange(item.id, { ...obj, total: newK + newP + newC, type: 'kpc-result' });
+                          };
+
+                          return (
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                              {[
+                                { label: 'Knowledge', key: 'k', val: k },
+                                { label: 'Personality', key: 'p', val: p },
+                                { label: 'Character', key: 'c', val: c }
+                              ].map(dim => (
+                                <div key={dim.key} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                  <span style={{ minWidth: '95px', fontSize: '13px', color: '#6b7280', fontWeight: 600 }}>{dim.label}:</span>
+                                  <input 
+                                    type="text" 
+                                    placeholder="Value" 
+                                    value={dim.val} 
+                                    onChange={(ev) => {
+                                      const newVals = { k, p, c };
+                                      newVals[dim.key] = ev.target.value;
+                                      update(newVals);
+                                    }} 
+                                    style={{ flex: 1, margin: 0 }} 
+                                  />
+                                </div>
+                              ))}
+                            </div>
+                          );
+                        })() : (
+                          <input
+                            type="text"
+                            placeholder={item.placeholder}
+                            value={answers[item.id] || ""}
+                            onChange={(e) => handleChange(item.id, e.target.value)}
+                            style={{ width: '100%' }}
+                          />
+                        )}
+                      </div>
+                      <button 
+                        type="button" 
+                        className="secondary-btn" 
+                        onClick={() => navigate(item.id === 21 ? '/kpc' : '/locus')} 
+                        style={{ 
+                          whiteSpace: "nowrap", 
+                          padding: "12px 20px", 
+                          height: "45px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          minWidth: "160px"
+                        }}
+                      >
+                        {item.id === 21 ? 'Calculate KPC' : 'Calculate Locus'}
+                      </button>
+                    </div>
                   ) : (
-                    <textarea
-                      rows="3"
-                      placeholder={item.placeholder}
-                      value={answers[item.id] || ""}
-                      onChange={(e) =>
-                        handleChange(item.id, e.target.value)
-                      }
-                    />
+                    <>
+                      {item.type === "input" ? (
+                        <input
+                          type="text"
+                          placeholder={item.placeholder}
+                          value={answers[item.id] || ""}
+                          onChange={(e) => handleChange(item.id, e.target.value)}
+                        />
+                      ) : (
+                        <textarea
+                          rows="3"
+                          placeholder={item.placeholder}
+                          value={answers[item.id] || ""}
+                          onChange={(e) => handleChange(item.id, e.target.value)}
+                        />
+                      )}
+                    </>
                   )}
                 </div>
               ))}

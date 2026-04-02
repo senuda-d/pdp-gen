@@ -1,0 +1,97 @@
+{
+    "assessment": "Cognitive Style (KPC) Assessment",
+    "description": "Measures core development areas: Knowledge, Personality, and Character",
+    "scale": {
+        "type": "likert",
+        "min": 1,
+        "max": 6,
+        "labels": {
+            "1": "Strongly Disagree",
+            "2": "Disagree",
+            "3": "Somewhat Disagree",
+            "4": "Somewhat Agree",
+            "5": "Agree",
+            "6": "Strongly Agree"
+        }
+    },
+    "scoring": {
+        "method": "sum_per_dimension",
+        "dimension_score_range": {
+            "min": 4,
+            "max": 24
+        },
+        "total_score_range": {
+            "min": 12,
+            "max": 72
+        },
+        "interpretation": {
+            "per_dimension": {
+                "low": "4–11",
+                "moderate": "12–18",
+                "high": "19–24"
+            }
+        }
+    },
+    "questions": [
+        {
+            "id": "K1",
+            "dimension": "Knowledge",
+            "text": "I stay updated with the latest trends and information in my field."
+        },
+        {
+            "id": "K2",
+            "dimension": "Knowledge",
+            "text": "I actively seek out new learning opportunities and courses."
+        },
+        {
+            "id": "K3",
+            "dimension": "Knowledge",
+            "text": "I am confident in my theoretical understanding of my specialization."
+        },
+        {
+            "id": "K4",
+            "dimension": "Knowledge",
+            "text": "I enjoy sharing my knowledge with others to help them grow."
+        },
+        {
+            "id": "P1",
+            "dimension": "Personality",
+            "text": "I am self-aware of my strengths and weaknesses."
+        },
+        {
+            "id": "P2",
+            "dimension": "Personality",
+            "text": "I can easily adapt my behavior to suit different social or professional situations."
+        },
+        {
+            "id": "P3",
+            "dimension": "Personality",
+            "text": "I stay calm and composed even when facing unexpected challenges."
+        },
+        {
+            "id": "P4",
+            "dimension": "Personality",
+            "text": "I am proactive in taking the initiative in group settings."
+        },
+        {
+            "id": "C1",
+            "dimension": "Character",
+            "text": "I always stick to my ethical principles, even when it's difficult."
+        },
+        {
+            "id": "C2",
+            "dimension": "Character",
+            "text": "I take full responsibility for my actions and their consequences."
+        },
+        {
+            "id": "C3",
+            "dimension": "Character",
+            "text": "Honesty and integrity are the most important values in my professional life."
+        },
+        {
+            "id": "C4",
+            "dimension": "Character",
+            "text": "I am committed to completing my tasks even when I encounter obstacles."
+        }
+    ]
+}
