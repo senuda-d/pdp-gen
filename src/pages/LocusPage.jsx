@@ -64,8 +64,8 @@ function LocusPage() {
   const handleSaveAndReturn = () => {
     if (!result) return;
     
-    // Format the answer
-    const formattedScore = `Score: ${result.score}/9 (${result.interpretation})`;
+    // Format the answer - just the numeric score as requested
+    const formattedScore = `${result.score}`;
     
     // Load existing FormPage answers
     const savedFormAnswers = localStorage.getItem("pdp_answers");

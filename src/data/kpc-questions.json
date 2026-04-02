@@ -1,6 +1,6 @@
 {
-    "assessment": "PsyCap (KPC) Assessment",
-    "description": "Measures Psychological Capital across 4 dimensions: Hope, Efficacy, Resilience, Optimism",
+    "assessment": "Cognitive Style (KPC) Assessment",
+    "description": "Measures core development areas: Knowledge, Personality, and Character",
     "scale": {
         "type": "likert",
         "min": 1,
@@ -16,13 +16,9 @@
     },
     "scoring": {
         "method": "sum_per_dimension",
-        "reverse_scored_questions": [
-            "Q12"
-        ],
-        "reverse_formula": "7 - answer",
         "dimension_score_range": {
-            "min": 3,
-            "max": 18
+            "min": 4,
+            "max": 24
         },
         "total_score_range": {
             "min": 12,
@@ -30,138 +26,72 @@
         },
         "interpretation": {
             "per_dimension": {
-                "low": "3–9",
-                "moderate": "10–13",
-                "high": "14–18"
-            },
-            "total": {
-                "low": "12–35",
-                "moderate": "36–53",
-                "high": "54–72"
+                "low": "4–11",
+                "moderate": "12–18",
+                "high": "19–24"
             }
         }
     },
     "questions": [
         {
-            "id": "Q1",
-            "dimension": "Hope",
-            "text": "I can think of many ways to get out of a tough situation.",
-            "example_answer": {
-                "value": 6,
-                "label": "Strongly Agree",
-                "explanation": "I always find alternative routes when I hit a dead end."
-            }
+            "id": "K1",
+            "dimension": "Knowledge",
+            "text": "I stay updated with the latest trends and information in my field."
         },
         {
-            "id": "Q2",
-            "dimension": "Hope",
-            "text": "Right now, I am energetically pursuing my goals.",
-            "example_answer": {
-                "value": 4,
-                "label": "Somewhat Agree",
-                "explanation": "I am actively working toward what I want but sometimes lose momentum."
-            }
+            "id": "K2",
+            "dimension": "Knowledge",
+            "text": "I actively seek out new learning opportunities and courses."
         },
         {
-            "id": "Q3",
-            "dimension": "Hope",
-            "text": "There are lots of ways around any problem I face.",
-            "example_answer": {
-                "value": 5,
-                "label": "Agree",
-                "explanation": "I rarely feel stuck because I can usually see multiple options."
-            }
+            "id": "K3",
+            "dimension": "Knowledge",
+            "text": "I am confident in my theoretical understanding of my specialization."
         },
         {
-            "id": "Q4",
-            "dimension": "Efficacy",
-            "text": "I feel confident helping to set targets and goals in my work or daily life.",
-            "example_answer": {
-                "value": 5,
-                "label": "Agree",
-                "explanation": "I am comfortable defining what I want to achieve and how to get there."
-            }
+            "id": "K4",
+            "dimension": "Knowledge",
+            "text": "I enjoy sharing my knowledge with others to help them grow."
         },
         {
-            "id": "Q5",
-            "dimension": "Efficacy",
-            "text": "I feel confident presenting information to a group of people.",
-            "example_answer": {
-                "value": 3,
-                "label": "Somewhat Disagree",
-                "explanation": "Public situations make me unsure of myself and I often stumble."
-            }
+            "id": "P1",
+            "dimension": "Personality",
+            "text": "I am self-aware of my strengths and weaknesses."
         },
         {
-            "id": "Q6",
-            "dimension": "Efficacy",
-            "text": "I feel confident contributing to discussions about strategy or direction.",
-            "example_answer": {
-                "value": 4,
-                "label": "Somewhat Agree",
-                "explanation": "I share my views in group settings, though I sometimes second-guess myself."
-            }
+            "id": "P2",
+            "dimension": "Personality",
+            "text": "I can easily adapt my behavior to suit different social or professional situations."
         },
         {
-            "id": "Q7",
-            "dimension": "Resilience",
-            "text": "When things are uncertain, I usually expect the best.",
-            "example_answer": {
-                "value": 4,
-                "label": "Somewhat Agree",
-                "explanation": "I lean toward hoping things work out even when the outcome is unclear."
-            }
+            "id": "P3",
+            "dimension": "Personality",
+            "text": "I stay calm and composed even when facing unexpected challenges."
         },
         {
-            "id": "Q8",
-            "dimension": "Resilience",
-            "text": "I can get through difficult times because I have experienced difficulty before.",
-            "example_answer": {
-                "value": 6,
-                "label": "Strongly Agree",
-                "explanation": "Past hardships have made me more confident in my ability to recover."
-            }
+            "id": "P4",
+            "dimension": "Personality",
+            "text": "I am proactive in taking the initiative in group settings."
         },
         {
-            "id": "Q9",
-            "dimension": "Resilience",
-            "text": "I feel like I can handle many things at a time when they come my way.",
-            "example_answer": {
-                "value": 3,
-                "label": "Somewhat Disagree",
-                "explanation": "I tend to feel overwhelmed when multiple challenges hit at the same time."
-            }
+            "id": "C1",
+            "dimension": "Character",
+            "text": "I always stick to my ethical principles, even when it's difficult."
         },
         {
-            "id": "Q10",
-            "dimension": "Optimism",
-            "text": "I always look on the bright side of things regarding my work and life.",
-            "example_answer": {
-                "value": 5,
-                "label": "Agree",
-                "explanation": "Even in bad situations I try to find something positive to hold onto."
-            }
+            "id": "C2",
+            "dimension": "Character",
+            "text": "I take full responsibility for my actions and their consequences."
         },
         {
-            "id": "Q11",
-            "dimension": "Optimism",
-            "text": "I am optimistic about what will happen to me in the future.",
-            "example_answer": {
-                "value": 4,
-                "label": "Somewhat Agree",
-                "explanation": "I generally believe things will turn out well for me over time."
-            }
+            "id": "C3",
+            "dimension": "Character",
+            "text": "Honesty and integrity are the most important values in my professional life."
         },
         {
-            "id": "Q12",
-            "dimension": "Optimism",
-            "reverse_scored": true,
-            "text": "In this area of my life, things never work out the way I want them to.",
-            "example_answer": {
-                "value": 2,
-                "label": "Disagree",
-                "explanation": "Things usually do work out for me, so I disagree with this negative statement. Reverse scored: 7 - 2 = 5."
-            }
+            "id": "C4",
+            "dimension": "Character",
+            "text": "I am committed to completing my tasks even when I encounter obstacles."
         }
     ]
 }

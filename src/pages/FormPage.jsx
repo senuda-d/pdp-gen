@@ -105,8 +105,14 @@ function FormPage() {
       section.items.forEach((item) => {
         if (answers[item.id]) {
           let ans = answers[item.id];
-          if (typeof ans === 'object') {
-            ans = `K: ${ans.k || "-"}, P: ${ans.p || "-"}, C: ${ans.c || "-"}`;
+          if (typeof ans === 'object' && ans !== null) {
+            if (ans.type === 'kpc-result') {
+              ans = `Knowledge: ${ans.k || 0}, Personality: ${ans.p || 0}, Character: ${ans.c || 0} (Total: ${ans.total || 0})`;
+            } else if (ans.type === 'psycap-result') {
+              ans = `Hope: ${ans.hope || 0}, Efficacy: ${ans.efficacy || 0}, Resilience: ${ans.resilience || 0}, Optimism: ${ans.optimism || 0}`;
+            } else {
+              ans = `K: ${ans.k || "-"}, P: ${ans.p || "-"}, C: ${ans.c || "-"}`;
+            }
           }
           userResponses[item.question] = ans;
         }
@@ -142,68 +148,89 @@ function FormPage() {
                   <label>{item.question}</label>
 
                   {item.id === 21 || item.id === 22 ? (
-                    <div style={{ display: "flex", gap: "10px", alignItems: "flex-start", width: "100%", flexWrap: "wrap" }}>
-                      <div style={{ flex: 1, width: "100%", minWidth: "250px" }}>
+                    <div style={{ 
+                      display: "flex", 
+                      flexDirection: "row", 
+                      gap: "16px", 
+                      alignItems: "flex-start", 
+                      width: "100%", 
+                      flexWrap: "wrap" 
+                    }}>
+                      <div style={{ flex: "1 1 300px" }}>
                         {item.id === 21 ? (() => {
                           let val = answers[item.id];
                           let k = "", p = "", c = "";
+                          
                           if (typeof val === "object" && val !== null) {
-                            k = val.k || ""; p = val.p || ""; c = val.c || "";
+                            if (val.type === 'kpc-result') {
+                              k = val.k || ""; p = val.p || ""; c = val.c || "";
+                            } else {
+                              // migration from early psycap attempt
+                              k = val.hope || val.k || ""; 
+                              p = val.efficacy || val.p || ""; 
+                              c = val.resilience || val.c || "";
+                            }
                           } else if (typeof val === "string") {
-                            let parts = val.split(" ");
-                            if (parts.length >= 3 && !val.includes("Total:")) {
-                              k = parts[0]; p = parts[1]; c = parts.slice(2).join(" ");
+                            let parts = val.split(" ").filter(s => s.trim());
+                            if (parts.length >= 3) {
+                              k = parts[0]; p = parts[1]; c = parts[2];
                             } else {
                               k = val;
                             }
                           }
+
+                          const update = (obj) => handleChange(item.id, { ...obj, type: 'kpc-result' });
+
                           return (
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%' }}>
-                              <input
-                                type="text"
-                                placeholder="K Value"
-                                value={k}
-                                onChange={(e) => handleChange(item.id, { k: e.target.value, p, c })}
-                                style={{ width: '100%' }}
-                              />
-                              <input
-                                type="text"
-                                placeholder="P Value"
-                                value={p}
-                                onChange={(e) => handleChange(item.id, { k, p: e.target.value, c })}
-                                style={{ width: '100%' }}
-                              />
-                              <input
-                                type="text"
-                                placeholder="C Value"
-                                value={c}
-                                onChange={(e) => handleChange(item.id, { k, p, c: e.target.value })}
-                                style={{ width: '100%' }}
-                              />
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                              {[
+                                { label: 'Knowledge', key: 'k', val: k },
+                                { label: 'Personality', key: 'p', val: p },
+                                { label: 'Character', key: 'c', val: c }
+                              ].map(dim => (
+                                <div key={dim.key} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                                  <span style={{ minWidth: '95px', fontSize: '13px', color: '#6b7280', fontWeight: 600 }}>{dim.label}:</span>
+                                  <input 
+                                    type="text" 
+                                    placeholder="Value" 
+                                    value={dim.val} 
+                                    onChange={(ev) => {
+                                      const newVals = { k, p, c };
+                                      newVals[dim.key] = ev.target.value;
+                                      update(newVals);
+                                    }} 
+                                    style={{ flex: 1, margin: 0 }} 
+                                  />
+                                </div>
+                              ))}
                             </div>
                           );
-                        })() : item.type === "input" ? (
+                        })() : (
                           <input
                             type="text"
                             placeholder={item.placeholder}
                             value={answers[item.id] || ""}
                             onChange={(e) => handleChange(item.id, e.target.value)}
-                          />
-                        ) : (
-                          <textarea
-                            rows="3"
-                            placeholder={item.placeholder}
-                            value={answers[item.id] || ""}
-                            onChange={(e) => handleChange(item.id, e.target.value)}
+                            style={{ width: '100%' }}
                           />
                         )}
                       </div>
-                      {item.id === 21 && (
-                        <button type="button" className="secondary-btn" onClick={() => navigate('/kpc')} style={{ whiteSpace: "nowrap", padding: "12px 20px", height: "fit-content" }}>Calculate KPC</button>
-                      )}
-                      {item.id === 22 && (
-                        <button type="button" className="secondary-btn" onClick={() => navigate('/locus')} style={{ whiteSpace: "nowrap", padding: "12px 20px", height: "fit-content" }}>Calculate Locus</button>
-                      )}
+                      <button 
+                        type="button" 
+                        className="secondary-btn" 
+                        onClick={() => navigate(item.id === 21 ? '/kpc' : '/locus')} 
+                        style={{ 
+                          whiteSpace: "nowrap", 
+                          padding: "12px 20px", 
+                          height: "45px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          minWidth: "160px"
+                        }}
+                      >
+                        {item.id === 21 ? 'Calculate KPC' : 'Calculate Locus'}
+                      </button>
                     </div>
                   ) : (
                     <>

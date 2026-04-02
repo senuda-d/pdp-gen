@@ -34,13 +34,10 @@ function KpcPage() {
     }
 
     // Dimensions
-    const dimensions = { Hope: 0, Efficacy: 0, Resilience: 0, Optimism: 0 };
+    const dimensions = { Knowledge: 0, Personality: 0, Character: 0 };
     
     kpcData.questions.forEach((q) => {
       let val = answers[q.id];
-      if (q.reverse_scored) {
-        val = 7 - val; // Reverse scoring mechanism
-      }
       if (dimensions[q.dimension] !== undefined) {
         dimensions[q.dimension] += val;
       }
@@ -57,15 +54,21 @@ function KpcPage() {
   const handleSaveAndReturn = () => {
     if (!result) return;
     
-    // Format the answer
-    const formattedScore = `Total: ${result.total} (Hope: ${result.dimensions.Hope}, Efficacy: ${result.dimensions.Efficacy}, Resilience: ${result.dimensions.Resilience}, Optimism: ${result.dimensions.Optimism})`;
+    // Store the structured results
+    const scoreResult = {
+      k: result.dimensions.Knowledge,
+      p: result.dimensions.Personality,
+      c: result.dimensions.Character,
+      total: result.total,
+      type: 'kpc-result'
+    };
     
     // Load existing FormPage answers
     const savedFormAnswers = localStorage.getItem("pdp_answers");
     const formAnswers = savedFormAnswers ? JSON.parse(savedFormAnswers) : {};
     
-    // Save to id: 21 (Cognitive style analysis K P C values)
-    formAnswers["21"] = formattedScore;
+    // Save to id: 21
+    formAnswers["21"] = scoreResult;
     localStorage.setItem("pdp_answers", JSON.stringify(formAnswers));
     
     navigate("/");
@@ -126,26 +129,21 @@ function KpcPage() {
           <div className="section shadow-hover" style={{ marginTop: "30px", background: "#f8f9fa", border: "2px solid #6c63ff" }}>
             <h2 className="section-title" style={{ textAlign: "center", color: "#6c63ff" }}>Your KPC Results</h2>
             
-            <div style={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap", margin: "30px 0" }}>
-              <div style={{ textAlign: "center", padding: "20px", background: "#fff", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.05)", minWidth: "150px" }}>
-                <h3 style={{ margin: "0 0 10px 0", color: "#666" }}>Hope</h3>
-                <p style={{ fontSize: "2rem", fontWeight: "bold", margin: 0, color: "#333" }}>{result.dimensions.Hope}</p>
-                <small style={{ color: "#888" }}>/ 18</small>
+            <div style={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap", margin: "30px 0", gap: "20px" }}>
+              <div style={{ textAlign: "center", padding: "20px", background: "#fff", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.05)", minWidth: "160px", flex: "1 1 200px" }}>
+                <h3 style={{ margin: "0 0 10px 0", color: "#666" }}>Knowledge</h3>
+                <p style={{ fontSize: "2rem", fontWeight: "bold", margin: 0, color: "#333" }}>{result.dimensions.Knowledge}</p>
+                <small style={{ color: "#888" }}>/ 24</small>
               </div>
-              <div style={{ textAlign: "center", padding: "20px", background: "#fff", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.05)", minWidth: "150px" }}>
-                <h3 style={{ margin: "0 0 10px 0", color: "#666" }}>Efficacy</h3>
-                <p style={{ fontSize: "2rem", fontWeight: "bold", margin: 0, color: "#333" }}>{result.dimensions.Efficacy}</p>
-                <small style={{ color: "#888" }}>/ 18</small>
+              <div style={{ textAlign: "center", padding: "20px", background: "#fff", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.05)", minWidth: "160px", flex: "1 1 200px" }}>
+                <h3 style={{ margin: "0 0 10px 0", color: "#666" }}>Personality</h3>
+                <p style={{ fontSize: "2rem", fontWeight: "bold", margin: 0, color: "#333" }}>{result.dimensions.Personality}</p>
+                <small style={{ color: "#888" }}>/ 24</small>
               </div>
-              <div style={{ textAlign: "center", padding: "20px", background: "#fff", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.05)", minWidth: "150px" }}>
-                <h3 style={{ margin: "0 0 10px 0", color: "#666" }}>Resilience</h3>
-                <p style={{ fontSize: "2rem", fontWeight: "bold", margin: 0, color: "#333" }}>{result.dimensions.Resilience}</p>
-                <small style={{ color: "#888" }}>/ 18</small>
-              </div>
-              <div style={{ textAlign: "center", padding: "20px", background: "#fff", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.05)", minWidth: "150px" }}>
-                <h3 style={{ margin: "0 0 10px 0", color: "#666" }}>Optimism</h3>
-                <p style={{ fontSize: "2rem", fontWeight: "bold", margin: 0, color: "#333" }}>{result.dimensions.Optimism}</p>
-                <small style={{ color: "#888" }}>/ 18</small>
+              <div style={{ textAlign: "center", padding: "20px", background: "#fff", borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.05)", minWidth: "160px", flex: "1 1 200px" }}>
+                <h3 style={{ margin: "0 0 10px 0", color: "#666" }}>Character</h3>
+                <p style={{ fontSize: "2rem", fontWeight: "bold", margin: 0, color: "#333" }}>{result.dimensions.Character}</p>
+                <small style={{ color: "#888" }}>/ 24</small>
               </div>
             </div>
 
