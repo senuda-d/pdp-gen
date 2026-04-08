@@ -237,6 +237,16 @@ function FormPage() {
                         {item.id === 21 ? 'Calculate KPC' : 'Calculate Locus'}
                       </button>
                     </div>
+                  ) : item.type === "select" ? (
+                    <select
+                      value={answers[item.id] || ""}
+                      onChange={(e) => handleChange(item.id, e.target.value)}
+                    >
+                      <option value="" disabled>{item.placeholder || "Select an option"}</option>
+                      {(item.options || []).map((opt) => (
+                        <option key={opt} value={opt}>{opt}</option>
+                      ))}
+                    </select>
                   ) : (
                     <>
                       {item.type === "input" ? (
