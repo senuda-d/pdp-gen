@@ -1,65 +1,94 @@
 {
   "questions": [
     {
-      "section": "Q1. Basic Info",
+      "section": "Q1. Personal Information",
       "items": [
-        { "id": 1, "question": "What is your name?", "type": "input", "placeholder": "e.g., Kamal" },
-        { "id": 2, "question": "What is your age?", "type": "input", "placeholder": "e.g., 20" },
-        { "id": 3, "question": "What is your current location?", "type": "input", "placeholder": "e.g., Colombo, Sri Lanka" },
-        { "id": 4, "question": "What is your educational background?", "type": "textarea", "placeholder": "e.g., BSc in IT at SLIIT (in progress)" },
-        { "id": 19, "question": "What is your IT number?", "type": "input", "placeholder": "e.g., it241000000" },
-        { "id": 20, "question": "What is your specialization?", "type": "input", "placeholder": "e.g., Specializing in Data Science" },
-        { "id": 27, "question": "Current Academic Status", "type": "input", "placeholder": "e.g., 1 year 2 semester" }
+        { "id": 1, "question": "What is your full name? (e.g., Last Name First Name)", "type": "input", "placeholder": "e.g., Perera K.A.N" },
+        { "id": 2, "question": "What is your gender?", "type": "select", "options": ["Male", "Female", "Other"], "placeholder": "Select gender" },
+        { "id": 3, "question": "What is your age?", "type": "input", "placeholder": "e.g., 20" },
+        { "id": 4, "question": "What is your Student Registration Number (IT Number)?", "type": "input", "placeholder": "e.g., IT24000000" },
+        { "id": 5, "question": "Which campus are you enrolled at?", "type": "input", "placeholder": "e.g., Malabe" },
+        { "id": 6, "question": "What degree program are you pursuing?", "type": "input", "placeholder": "e.g., BSc (Hons) in Information Technology" },
+        { "id": 7, "question": "What is your specialization?", "type": "input", "placeholder": "e.g., Artificial Intelligence" },
+        { "id": 8, "question": "What is your current academic year and semester?", "type": "input", "placeholder": "e.g., Year 2 Semester 2" }
       ]
     },
     {
-      "section": "Q2. Personality & Working Style",
+      "section": "Q2. Academic Background",
       "items": [
-        { "id": 5, "question": "Describe your personality", "type": "textarea", "placeholder": "e.g., Introverted, analytical, calm" },
-        { "id": 6, "question": "What are your core values?", "type": "textarea", "placeholder": "e.g., Growth, discipline, honesty" },
-        { "id": 7, "question": "How do you prefer to learn?", "type": "textarea", "placeholder": "e.g., Hands-on projects, YouTube tutorials" },
-        { "id": 21, "question": "Cognitive style analysis K P C values?", "type": "input", "placeholder": "e.g., 32 33 19" },
-        { "id": 22, "question": "What is your locus of control score?", "type": "input", "placeholder": "e.g., 2" }
+        { "id": 9, "question": "List the subjects you have completed so far (grouped by semester)", "type": "textarea", "placeholder": "e.g., Y1S1: Intro to Programming, Math for Computing | Y1S2: DSA, OOP | ..." },
+        { "id": 10, "question": "What is your current cumulative GPA (if available)?", "type": "input", "placeholder": "e.g., 3.65" },
+        { "id": 11, "question": "Describe any academic projects or achievements so far", "type": "textarea", "placeholder": "e.g., Built a MERN stack vehicle management system as a group project" }
       ]
     },
     {
-      "section": "Q3. Career & Goals",
+      "section": "Q3. Personality Assessment (Big Five)",
       "items": [
-        { "id": 8, "question": "What is your short-term goal?", "type": "textarea", "placeholder": "e.g., Get an internship as a developer" },
-        { "id": 9, "question": "What is your long-term vision?", "type": "textarea", "placeholder": "e.g., Become a senior software engineer abroad" },
-        { "id": 10, "question": "What role or industry are you working toward?", "type": "input", "placeholder": "e.g., Full-stack developer" }
+        { "id": 12, "question": "Openness to Experience — Percentile score", "type": "input", "placeholder": "e.g., 95" },
+        { "id": 13, "question": "Conscientiousness — Percentile score", "type": "input", "placeholder": "e.g., 99" },
+        { "id": 14, "question": "Extraversion — Percentile score", "type": "input", "placeholder": "e.g., 69" },
+        { "id": 15, "question": "Agreeableness — Percentile score", "type": "input", "placeholder": "e.g., 94" },
+        { "id": 16, "question": "Negative Emotionality (Neuroticism) — Percentile score", "type": "input", "placeholder": "e.g., 15" },
+        { "id": 17, "question": "Briefly describe your personality in your own words", "type": "textarea", "placeholder": "e.g., Introverted, analytical, calm, and focused on growth" }
       ]
     },
     {
-      "section": "Q4. Skills & Experience",
+      "section": "Q4. Cognitive Style & Locus of Control",
       "items": [
-        { "id": 11, "question": "Your top strengths or skills", "type": "textarea", "placeholder": "e.g., Java, problem solving, teamwork" },
-        { "id": 12, "question": "Skills you need to improve", "type": "textarea", "placeholder": "e.g., Communication, React, backend" },
-        { "id": 13, "question": "Projects or achievements", "type": "textarea", "placeholder": "e.g., Built a vehicle management system" }
+        { "id": 21, "question": "Cognitive Style Analysis (K, P, C values)", "type": "input", "placeholder": "e.g., 18 35 31" },
+        { "id": 22, "question": "What is your Locus of Control test score?", "type": "input", "placeholder": "e.g., 2" }
       ]
     },
     {
-      "section": "Q5. Challenges & Support",
+      "section": "Q5. Skills Audit",
       "items": [
-        { "id": 14, "question": "Biggest challenges you face", "type": "textarea", "placeholder": "e.g., Time management, consistency" },
-        { "id": 15, "question": "External factors affecting growth", "type": "textarea", "placeholder": "e.g., Limited resources, opportunities" },
-        { "id": 16, "question": "Support systems you rely on", "type": "textarea", "placeholder": "e.g., Friends, online communities" }
+        { "id": 23, "question": "List your technical skills with current proficiency level (Beginner / Intermediate / Advanced)", "type": "textarea", "placeholder": "e.g., Python: Intermediate, MERN Stack: Beginner, SQL: Intermediate" },
+        { "id": 24, "question": "List your soft/professional skills with current proficiency level", "type": "textarea", "placeholder": "e.g., Communication: Intermediate, Time Management: Intermediate, Teamwork: Advanced" },
+        { "id": 25, "question": "Which skills do you most need to improve for your career goals?", "type": "textarea", "placeholder": "e.g., Advanced Machine Learning, Backend Architecture, Public Speaking" }
       ]
     },
     {
-      "section": "Q6. Preferences for the Plan",
+      "section": "Q6. SWOT Analysis",
       "items": [
-        { "id": 17, "question": "Time horizon for the plan", "type": "input", "placeholder": "e.g., 1 year" },
-        { "id": 18, "question": "Any specific sections to include?", "type": "textarea", "placeholder": "e.g., Fitness, finance, mindset" }
+        { "id": 26, "question": "List your key strengths (personal, academic, and technical)", "type": "textarea", "placeholder": "e.g., Strong planning skills, detail-oriented, creative thinking, good teamwork" },
+        { "id": 27, "question": "List your key weaknesses or areas for improvement", "type": "textarea", "placeholder": "e.g., Perfectionism, limited industry experience, balancing workload" },
+        { "id": 28, "question": "What opportunities are available to you?", "type": "textarea", "placeholder": "e.g., High demand for AI skills, university resources, online platforms like Kaggle/GitHub" },
+        { "id": 29, "question": "What threats or external challenges do you face?", "type": "textarea", "placeholder": "e.g., Competitive job market, rapid technology changes, risk of burnout" }
       ]
     },
     {
-      "section": "Q7. SWOT Analysis Details",
+      "section": "Q7. Goals & Career Vision",
       "items": [
-        { "id": 23, "question": "SWOT - Leadership roles", "type": "textarea", "placeholder": "e.g., Actively engaged in personal web development projects..." },
-        { "id": 24, "question": "SWOT - Industry Experience", "type": "textarea", "placeholder": "e.g., Hands-on experience across frontend and backend development..." },
-        { "id": 25, "question": "SWOT - Diverse Roles/Industries", "type": "textarea", "placeholder": "e.g., Contributed to academic and personal projects spanning web application development..." },
-        { "id": 26, "question": "SWOT - Educational Qualifications", "type": "textarea", "placeholder": "e.g., Ongoing education in Information Technology (BSc in IT at SLIIT)..." }
+        { "id": 30, "question": "What are your short-term goals? (next 1–6 months, be specific)", "type": "textarea", "placeholder": "e.g., Complete MERN+AI project in 2 weeks, build a mobile app in 1.5 months" },
+        { "id": 31, "question": "What are your medium-term goals? (6 months – 2 years)", "type": "textarea", "placeholder": "e.g., Complete 2 certifications, participate in 2 hackathons, achieve GPA above 3.85" },
+        { "id": 32, "question": "What is your long-term vision? (degree completion and beyond)", "type": "textarea", "placeholder": "e.g., Achieve First-Class honors, become a senior software engineer specializing in AI" },
+        { "id": 33, "question": "What role or industry are you working toward?", "type": "input", "placeholder": "e.g., Full-stack Developer / AI Engineer" }
+      ]
+    },
+    {
+      "section": "Q8. Reflections",
+      "items": [
+        { "id": 34, "question": "What progress have you made in the last month?", "type": "textarea", "placeholder": "e.g., Improved progress in MERN Stack + AI/ML project" },
+        { "id": 35, "question": "What challenges did you face recently?", "type": "textarea", "placeholder": "e.g., Balancing academic work with projects and extracurriculars" },
+        { "id": 36, "question": "What are your priorities for the next month?", "type": "textarea", "placeholder": "e.g., Follow a structured weekly schedule, allocate dedicated coding time" },
+        { "id": 37, "question": "Summarize your progress and key learnings this semester", "type": "textarea", "placeholder": "e.g., Completed major assignments, improved Java and DSA skills" },
+        { "id": 38, "question": "Summarize your overall yearly growth and next year's focus", "type": "textarea", "placeholder": "e.g., Year 1 built programming foundation; Year 2 enhanced practical skills through projects" }
+      ]
+    },
+    {
+      "section": "Q9. Motivation & Interests",
+      "items": [
+        { "id": 39, "question": "What motivates you the most in your studies and career?", "type": "textarea", "placeholder": "e.g., Innovation, solving real-world problems, building impactful technology" },
+        { "id": 40, "question": "How do you prefer to learn?", "type": "textarea", "placeholder": "e.g., Hands-on projects, YouTube tutorials, online courses" },
+        { "id": 41, "question": "What extracurricular activities or clubs are you involved in?", "type": "textarea", "placeholder": "e.g., IEEE Student Branch, university coding club, tech community volunteering" }
+      ]
+    },
+    {
+      "section": "Q10. Challenges & Support",
+      "items": [
+        { "id": 42, "question": "What are the biggest challenges you currently face?", "type": "textarea", "placeholder": "e.g., Time management, keeping up with rapid tech changes, self-doubt" },
+        { "id": 43, "question": "What support systems do you rely on?", "type": "textarea", "placeholder": "e.g., University mentors, tech communities, peer study groups, family" },
+        { "id": 44, "question": "What external factors limit your growth?", "type": "textarea", "placeholder": "e.g., Limited local mentorship, financial constraints, limited industry exposure" }
       ]
     }
   ]

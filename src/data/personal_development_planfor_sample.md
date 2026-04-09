@@ -1,205 +1,125 @@
-[page 01]
 <div align="center">
 
-# Personal Development Plan for Mr. Kamal:
+## Personal Development Plan
+
+A Comprehensive Analysis of Personality, Cognitive Style, Locus of Control, Academic Progress, and SWOT Prepared for One-to-One Fine-Tuning
+
+
+# Undergraduate at SLIIT-BSc in Information Technology Specialized in Artificial Intelligence
 
 </div>
 
-<div align="center">
+Mr. Perera K.A.N
 
-# A Comprehensive Analysis of Personality, Cognitive Style, Locus of Control, Academic Progress, and SWOT Prepared for One-to-One Fine-Tuning
+Student Registration Number: IT24000000 Campus: Malabe
 
-</div>
-
-<div align="center">
-
-# Undergraduate at SLIIT-BSc in Specializing in Data Science
-# Student Registration Number: IT24100000 
-# Campus: SLIIT
-
-Analyzed by: Sanjeeva Perera
-
-</div>
-
-
-[page 02]
 ## Disclaimer
 
-This report is prepared based on the test results of Personality, Cognitive Style, Locus of Control, and Student Prepared SWOT and the enrolled degree program. The proposed Personal Development Plan must be fine-tuned or changed after a discussion with the student. So, this report is a foundation for further analysis of passion, interest, motivation, and positive psychology to arrive at a Final Plan.
+This report is prepared based on the test results of Personality, Cognitive Style, Locus of Control, and Student-Prepared SWOT, as well as the enrolled degree program. The proposed Personal Development Plan must be fine-tuned or revised following a discussion with the student. As such, this report serves as a foundation for further analysis of passion, interest, motivation, and positive psychology to arrive at a Final Plan.
 
-[page 03]
-## Personal Development Plan for Mr. Kamal - BSc (Hons) in IT specializing in Data Science
+Personal Development Plan for Mr. Perera K.A.N-BSc (Hons) in IT specializing in Artificial Intelligence.
 
 ### 1. Self-Assessment Overview:
 
-- Personality (Big Five Analysis): Kamal is moderately open to new experiences, conscientious, introverted, agreeable, and emotionally stable. He is reliable, organized, and prefers structured environments but enjoys some level of innovation.
+- Personality (Big Five Analysis): Perera K.A.N is highly open to new ideas and creative thinking, and is diligent, organized, and highly responsible. He enjoys being around others and actively participates in social activities. He is also highly compassionate, considerate, and naturally cooperative while remaining highly composed, emotionally stable, and rarely experiencing strong negative emotions.
 
-- Cognitive Style: He leans heavily towards planning, suggesting a methodical and structured approach to work. While he has moderate creativity, he places less emphasis on knowing facts and specific details.
+- Cognitive Style: He demonstrates a strong planning-oriented cognitive style combined with creativity and innovation. He is highly organized, detail-oriented, and reliable, while also remaining open to new ideas and creative solutions. He prefers structured environments but is capable of thinking innovatively and adapting when necessary.
 
-- Locus of Control: With a strong internal locus of control, Kamal believes he is responsible for his own success, which drives his proactive problem-solving attitude and perseverance.
+- Locus of Control: He demonstrates a strong internal locus of control, indicating that he strongly believes his actions, decisions, and efforts have a direct impact on his outcomes. He tends to take responsibility for his successes and challenges, showing a proactive and self-driven mindset. This suggests that he is motivated to work hard, overcome obstacles, and achieve his goals through his own abilities while placing less emphasis on external factors such as luck or circumstances.
 
-- Current Academic and Professional Background: Kamal is pursuing a degree in IT with a specialization in Data Science at SLIIT. He also manages two businesses and has significant experience in multiple industries.
+- Current Academic and Professional Background: Perera K.A.N is currently an undergraduate student at SLIIT pursuing Information Technology with a specialization in Artificial Intelligence. He has experience in software development and AI/ML projects and is actively involved in extracurricular activities, showcasing strong leadership and teamwork skills.
 
+- Motivation & Interests: He is driven by innovation and enjoys working on machine learning and software development projects. He is passionate about learning new technologies, solving real-world problems, and actively participating in team and community activities.
 
-## 2. Skill Audit (Technical & Professional):
+- Challenges He Face: Perera K.A.N faces challenges in balancing academics, projects, and extracurricular activities while keeping pace with rapidly evolving technologies. He continuously works on improving his time management and problem-solving skills to overcome these challenges.
 
-<table border="1"><tr><td>Skill</td><td>Current Level</td><td>Required Level</td><td>Action Steps</td></tr><tr><td>Example:Java</td><td>Intermediate</td><td>Advanced</td><td>CompleteHackerRank Java tracks; build 2mini-projects</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></table>
+### 2. Skill Audit (Technical & Professional):
 
+<table border="1"><tr><td>Skill</td><td>Current Level</td><td>Required Level</td><td>Action Steps</td></tr><tr><td>MERN Stack (MongoDB, Express, React, Node.js)</td><td>Beginner</td><td>Advanced</td><td>Build full-stack MERN apps; implement authentication; practice API integration. Deploy apps (e.g., Render/Vercel)</td></tr><tr><td>Python &amp; Machine Learning</td><td>Intermediate</td><td>Advanced</td><td>Practice pandas, NumPy, scikit-learn and model building &amp; complete real-world projects. Train and evaluate models (Random Forest, Decision Tree)</td></tr><tr><td>SQL/Databases</td><td>Intermediate</td><td>Advanced</td><td>Practice complex queries on SQL databases and work with NoSQL databases such as MongoDB, which is used in web and mobile application development projects</td></tr><tr><td>Git &amp; GitHub</td><td>Beginner</td><td>Advanced</td><td>Use version control in all projects; learn</td></tr></table>
 
-## 3. Strengths, Weaknesses, Opportunities, and Threats (SWOT) Analysis Summary:
+<table border="1"><tr><td>Skill</td><td>Current Level</td><td>Required Level</td><td>Action Steps</td></tr><tr><td></td><td></td><td></td><td>branching and collaboration with team members</td></tr><tr><td>Communication Skills</td><td>Intermediate</td><td>Advanced</td><td>Participate in presentations, tech talks, and improve ability to explain technical concepts clearly</td></tr><tr><td>Time Management</td><td>Intermediate</td><td>Advanced</td><td>Use planners and schedules to balance academics, projects, and extracurricular activities effectively</td></tr></table>
+
+### 3. Strengths, Weaknesses, Opportunities, and Threats (SWOT) Analysis Summary:
 
 - Strengths:
 
-    - Strong leadership skills and entrepreneurial experience.
+- Strong planning and organizational skills
 
-    - Versatile industry experience across software, pharmaceutical, insurance, and more.
+- Detail-oriented and responsible
 
-    - Sound educational foundation and membership in professional organizations.
+- Creative and innovative thinking
 
-    - Organized, disciplined, emotionally stable, and takes responsibility for personal and professional outcomes.
+- Good problem-solving ability
+
+- Strong teamwork and leadership experience
+
+- Fluent in both Sinhala and English
+
+- Emotionally stable and performs well under pressure
 
 - Weaknesses:
 
-    - Limited financial resources for expanding business ventures.
+- Tendency to focus too much on perfection/details
 
-    - Gaps in technical knowledge, particularly in software development and emerging technologies.
+- Still developing advanced machine learning skills
+
+- Limited real-world industry experience
+
+- Difficulty balancing multiple responsibilities at times
 
 - Opportunities:
 
-    - Increasing digital transformation across industries.
+- High demand for Data Science and AI skills
 
-    - Access to open-source technologies and social media marketing platforms.
+- Access to university projects and resources
 
-    - Collaboration with skilled professionals for technical expertise.
+- Online platforms (Kaggle, GitHub) to showcase skills
+
+- Networking through clubs and tech communities
 
 - Threats:
 
-    - Rapid advancements in AI and emerging technologies.
+- High competition in tech internships and jobs
 
-    - Competitive pressures and pricing challenges in the software market.
+- Rapid changes in technology requiring continuous learning
 
-    - Evolution of SaaS models that require new business adaptations.
+- Risk of burnout due to heavy workload
 
-## 4. Personal Development Plan (PDP) Goals:
+### 4. SMART Goals:
 
-### Goal 1: Enhance Technical Skills and Knowledge in Data Science and Emerging Technologies
+<table border="1"><tr><td>Goal</td><td>Specific</td><td>Measurable</td><td>Achievable</td><td>Relevant</td><td>Time-bound</td></tr><tr><td>Goal 1</td><td>Improve real-world project development skills</td><td>Complete the remaining 25% of the ongoing MERN Stack+AI/ML project</td><td>Yes</td><td>Useful for full-stack development and portfolio</td><td>Within 2 weeks</td></tr><tr><td>Goal 2</td><td>Develop mobile application development skills</td><td>Develop and deploy 1 functional mobile application</td><td>Yes</td><td>Useful for full-stack development and portfolio</td><td>Within 1 1/2 months</td></tr><tr><td>Goal 3</td><td>Obtain professional certifications through online courses</td><td>Complete at least 2 certifications(e.g.,Data Science)</td><td>Yes</td><td>Enhances technical skills and improves employability</td><td>Within 3-4 months</td></tr><tr><td>Goal 4</td><td>Participate in hackathons and coding competitions</td><td>Participate in at least 2 hackathons or competitions</td><td>Yes</td><td>Improves problem-solving, teamwork,and practical experience</td><td>Within 5-6 months</td></tr><tr><td>Goal 5</td><td>Get a good GPA for current semester(2Y2S)</td><td>Achieve GPA above 3.85</td><td>Yes</td><td>Important for academic success and future</td><td>By end of Y2S2 semester</td></tr></table>
 
-- Action Plan:
+<table border="1"><tr><td>Goal</td><td>Specific</td><td>Measurable</td><td>Achievable</td><td>Relevant</td><td>Time-bound</td></tr><tr><td></td><td></td><td></td><td></td><td>internships</td><td></td></tr><tr><td>Goal 6</td><td>Achieve a First-Class degree upon graduation</td><td>Maintain overall GPA ≥ 3.7 throughout the degree</td><td>Yes</td><td>Important for career opportunities and academic excellence</td><td>By the end of the degree program</td></tr></table>
 
-    1. Complete the BSc in IT-Data Science: Focus on subjects such as machine learning, big data analytics, and artificial intelligence, which are key areas in the industry.
+### 5. Reflection Cycles:
 
-    2. Take Advanced Certifications: Enroll in specialized courses and certifications in Python programming, deep learning, cloud computing (AWS, Azure), and AI. Consider certifications such as AWS Certified Machine Learning Specialty or TensorFlow Developer Certification.
+### Monthly Reflection
 
-    3. Leverage Open-Source Platforms: Practice coding and model building using open-source platforms like Kaggle and GitHub to sharpen practical skills.
+- Improved progress in MERN Stack + AI/ML project and enhanced problem-solving skills.
 
-    4. Attend Workshops and Seminars: Participate in industry workshops, webinars, and technical events related to AI, data science, and blockchain to stay updated on emerging trends.
+- Faced challenges in balancing academic work, projects, and extracurricular activities.
 
-- Timeline:
+- Next month: Follow a structured weekly schedule and allocate dedicated time for coding and learning.
 
-    - Complete courses by the end of the current academic year.
+### Semester Reflection
 
-    - Earn at least one advanced certification by 2026.
+- Successfully completed major assignments and contributed actively to group projects.
 
-- Success Criteria:
+- Improved skills in Java, DSA and basic machine learning concepts.
 
-    - Achieve strong academic results in relevant data science subjects.
+- Need to improve consistency in revision and focus more on advanced technical concepts.
 
-    - Attain certifications that enhance employability and technical knowledge.
+### Yearly Reflection
 
-    - Build a portfolio of data science projects on GitHub.
+- Year 1 built a strong foundation in programming and fundamental concepts.
 
-### Goal 2: Expan-d Financial Stability and Business Growth
+- Year 2 enhanced practical skills through projects, teamwork, and technical involvement.
 
-- Action Plan:
-
-    1. Develop Financial Literacy: Take online courses in financial management, investment strategies, and entrepreneurship to improve financial decision making.
-
-    2. Seek Business Funding: Explore funding opportunities such as venture capital, angel investors, and government grants to support expansion of his software solutions business.
-
-    3. Implement Financial Planning Tools: Utilize software tools to monitor cash flow, project future financial needs, and optimize investment strategies for his businesses.
-
-    4. Collaborate with Financial Experts: Consult financial advisors or accountants to develop a long-term financial growth plan.
-
-- Timeline:
-
-    - Explore funding opportunities within the next 12 months.
-
-    - Develop a financial growth strategy for business expansion by 2025.
-
-- Success Criteria:
-
-    - Securing investment or funding.
-
-    - Increase in business revenue and profitability over the next 3 years.
-
-### Goal 3: Improve Creativity and Adaptability in Problem-Solving
-
-- Action Plan:
-
-    1. Creative Thinking Workshops: Attend workshops focused on creative problem-solving and design thinking to foster innovative approaches.
-
-    2. Collaborate on Cross-Disciplinary Projects: Engage in projects that integrate technology with creative industries, such as digital marketing or product design.
-
-    3. Incorporate Innovation in Business Solutions: Apply creative thinking to the development of innovative solutions in his current businesses by exploring new technologies (e.g., AI-driven software, cloud-based POS systems).
-
-- Timeline:
-
-    - Attend at least 2 creativity workshops by 2024.
-
-    - Implement a new innovative business solution by 2025.
-
-- Success Criteria:
-
-    - Successful implementation of creative solutions in his businesses.
-
-    - Positive feedback from customers on new innovations.
-
-### Goal 4: Strengthen Personal Brand and Networking
-
-- Action Plan:
-
-    1. Build an Online Presence: Develop a strong LinkedIn profile, regularly post industry insights, and showcase academic and professional achievements.
-
-    2. Digital Marketing Strategy: Leverage social media and content marketing (blogs, webinars) to boost visibility of his businesses and personal brand.
-
-    3. Expand Professional Network: Join professional groups in data science and IT, attend industry events, and actively engage in forums and conferences to build connections.
-
-- Timeline:
-
-    - Establish an active LinkedIn presence by 2024.
-
-    - Attend at least 3 networking events each year.
-
-- Success Criteria:
-
-    - Increased professional connections and collaborations.
-
-    - Recognition of his businesses through enhanced online visibility.
-
-### 4. Continuous Monitoring and Reflection:
-
-- **Quarterly Self-Assessment:** Kamal should assess progress every quarter, identifying any gaps and refining his plan where needed. Regular self-reflection based on his strong internal locus of control will help him stay motivated.
-
-- *-**Mentorship:** Engaging a mentor in data science or business can provide guidance and feedback on his development goals.
-
-## Conclusion:
-
-By following this Personal Development Plan, Kamal can enhance his technical capabilities, expand his business acumen, foster creativity, and build a strong professional brand. His conscientious and structured nature will support the disciplined approach required to meet these goals, and his internal locus of control will drive the persistence needed to overcome any challenges.
-
-
-### 5. SMART Goals:
-
-<table><thead><tr><th>Goal</th><th>Specific</th><th>Measurable</th><th>Achievable</th><th>Relevant</th><th>Time-bound</th></tr></thead><tbody><tr><td>Example: Goal 1</td><td>Improve Java skills</td><td>Complete 2 Java projects</td><td>Yes</td><td>Needed for CSE modules &amp; industry</td><td>Within 3 months</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
-
-
+- Moving forward, aim to strengthen expertise in data science, AI/ML, and become industry-ready.
 
 ## Annexure A
 
-<div align="center">
-
-# Analysis of Mr. Kamal
-
-</div>
+Analysis of Mr. Perera K.A.N
 
 ## Personality
 
@@ -207,220 +127,325 @@ Based on the Big Five personality test results, the person's traits can be analy
 
 Openness to Experience (Closed-Minded vs. Open to New Experiences):
 
-The red dot is slightly leaning towards the middle, indicating a person who is neither extremely open nor completely closed to new experiences. You likely enjoy trying new things to some extent but may also value routine or familiar experiences.
+The red dot is strongly leaning towards the open end, indicating a highly creative, curious, and imaginative individual. He enjoys exploring new ideas, engaging in innovative thinking, and seeking out new experiences rather than sticking to routine or familiar approaches.
 
 Conscientiousness (Disorganized vs. Conscientious):
 
-The red dot is closer to the conscientious side, suggesting that the individual is organized, reliable, and tends to be disciplined in their approach to work or responsibilities.
+The red dot is very close to the conscientious side, suggesting that the individual is highly organized, reliable, and disciplined. He tends to plan ahead, pay attention to details, and approach tasks with a strong sense of responsibility and commitment.
 
-Extraversion (Introverted vs. Extraverted):
+### Extraversion (Introverted vs. Extraverted):
 
-The red dot is closer to the introverted side, indicating a more reserved, reflective, and quiet individual who may prefer solitude or small, intimate social settings rather than large, boisterous gatherings.
+The red dot is slightly leaning towards the extraverted side, indicating a socially active and engaging individual. He enjoys interacting with others, participating in group activities, and maintaining a balance between social interaction and personal space.
 
-Agreeableness (Disagreeable vs. Agreeable):
+### Agreeableness (Disagreeable vs. Agreeable):
 
-The red dot is closer to the middle but slightly leaning towards agreeable, which implies that the person is relatively cooperative, friendly, and compassionate, but may also maintain a balance of assertiveness when needed.
+The red dot is strongly leaning towards the agreeable side, which implies that the person is compassionate, cooperative, and considerate. He tends to value teamwork, maintain positive relationships, and show empathy towards others.
 
-Neuroticism (Calm/Relaxed vs. Nervous/High-Strung):
+### Neuroticism (Calm/Relaxed vs. Nervous/High-Strung):
 
-The red dot leans towards the calm/relaxed end of the spectrum, suggesting the person is generally emotionally stable, tends to remain composed under pressure, and is less likely to experience high levels of stress or anxiety.
+The red dot leans strongly towards the calm/relaxed end of the spectrum, suggesting that the person is emotionally stable, composed, and resilient. He is less likely to experience stress or anxiety and can handle pressure effectively.
 
-Overall, the individual shows a balanced personality, leaning towards being conscientious and emotionally stable while being more introverted and moderately agreeable.
+### Overall Personality Summary:
+
+Overall, the individual demonstrates a well-balanced and high-performing personality, characterized by strong openness and conscientiousness, combined with high agreeableness and emotional stability. This indicates a creative, responsible, and socially adaptable individual who can perform effectively in both independent and team-oriented environments.
 
 ## Analysis of Cognitive Style
 
 Based on the Cognitive Style Test results with the K, P, and C values provided, we can interpret the cognitive style of this individual as follows:
 
-K Value: 19 (Represents Knowing):
+### K Value: 18 (Represents Knowing):
 
-The K value reflects a tendency toward a knowing cognitive style, which emphasizes factual knowledge, clarity, and detail. However, with a score of 19, this person seems to exhibit a lower preference for a knowing style. They may not rely heavily on precision, data, or specific facts when processing information. Instead, they could prefer other cognitive approaches over focusing strictly on hard facts and definitive knowledge.
+The K value reflects a tendency toward a knowing cognitive style, which emphasizes factual knowledge, clarity, and detail. With a score of 18, the individual demonstrates a moderate preference for the knowing style. This suggests that he values understanding concepts and analyzing information, but does not rely solely on facts and precision. Instead, he maintains a balanced approach, combining logical thinking with other cognitive strategies.
 
-P Value: 33 (Represents Planning):
+### P Value: 35 (Represents Planning):
 
-The P value reflects a tendency toward a planning cognitive style, which focuses on structure, order, and step-by-step approaches. With a score of 33, this individual shows a moderate to strong preference for planning. They are likely to appreciate structure and organization, and they may prefer well-laid-out strategies and methodologies when approaching tasks or solving problems. This aligns with their conscientious nature from the Big Five analysis, suggesting a tendency toward disciplined and organized thinking.
+The P value reflects a tendency toward a planning cognitive style, which focuses on structure, organization, and step-by-step approaches. With a high score of 35, the individual shows a very strong preference for planning. He is highly organized, disciplined, and prefers structured methods when approaching tasks or solving problems. This aligns with his strong conscientiousness trait, indicating a consistent and methodical working style.
 
-C Value: 32 (Represents Creating):
+### C Value: 31 (Represents Creating):
 
-The C value reflects a tendency toward a creating cognitive style, which is characterized by innovation, imagination, and thinking outside the box. A score of 32 indicates a moderate preference for creativity. The person values originality and enjoys generating new ideas, which shows that they are open to creative problem-solving and innovation but may balance it with planning. This creativity might reflect openness to new experiences in certain contexts, although their Big Five test suggested only moderate openness overall.
+The C value reflects a tendency toward creating a cognitive style, characterized by creativity, innovation, and thinking outside the box. With a score of 31, the individual demonstrates a high level of creativity. He enjoys generating new ideas, exploring innovative solutions, and approaching problems with originality. This complements his openness to experience, allowing him to balance creativity with structured thinking.
 
-####  Cognitive Style Summary:
+### Cognitive Style Summary:
 
-This person shows a strong tendency towards planning (P), indicating they are systematic, organized, and prefer structure in their thought processes and decision-making. The moderate creating score (C) suggests they can also engage in creative thinking, though it may not be their primary approach. They have a lower preference for the knowing style (K), meaning they may not rely as much on facts or details and might prefer broader or more abstract thinking in some situations.
+This person shows a dominant planning-oriented cognitive style (P), indicating a strong preference for organization, structure, and systematic thinking. At the same time, the high creating score (C) highlights the ability to think creatively and generate innovative solutions. The moderate knowing score (K) suggests a balanced approach to analysis and factual understanding.
 
-In summary, this individual likely blend structured, methodical thinking with a willingness to engage in creativity. They are less focused on gathering detailed knowledge and more inclined toward planning and innovation.
+### Overall Interpretation:
+
+In summary, the individual demonstrates a powerful combination of structured, methodical thinking and creative problem-solving. They are highly organized and disciplined, while also being capable of innovation and adaptability. This balanced cognitive style makes them well-suited for complex problem-solving tasks, particularly in fields such as machine learning and software development.
 
 ## Analysis of Locus of Control
 
-A Locus of Control Test Value of 2 indicates that the individual has a strong internal locus of control. The locus of control spectrum measures how much control a person believes they have over events and outcomes in their life.
+A Locus of Control Test Value of 2 indicates that the individual has a very strong internal locus of control. The locus of control spectrum measures how much control a person believes they have over events and outcomes in their life.
 
-####  Internal Locus of Control:
+### Internal Locus of Control:
 
-A low score, such as 2, signifies that the person feels highly in control of their own life and outcomes. They believe that their actions, decisions, and efforts directly influence the results they achieve.
+A low score, such as 2, signifies that the individual feels highly in control of their own life and outcomes. He believes that his actions, decisions, and efforts directly influence the results he achieves.
 
-People with an internal locus of control often feel responsible for their successes and failures and are typically motivated to take initiative and strive for self-improvement.
+People with a strong internal locus of control feel responsible for their successes and failures and are typically motivated to take initiative and strive for self-improvement. This type of person is more likely to set clear goals, work consistently toward them, and take ownership of their work.
 
-This type of person likely exhibits a strong sense of personal agency, meaning they are more likely to work hard to achieve goals, take ownership of their work, and feel empowered to change circumstances in their favor.
+This also indicates a strong sense of personal agency, meaning he believes he can influence circumstances through effort and determination rather than relying on external factors such as luck or fate.
 
-Characteristics of This Person:
+### Characteristics of This Person:
 
-Self-Motivation: The person is probably self-driven and takes responsibility for their successes or setbacks. They may be highly motivated to set and pursue personal and professional goals.
+#### Self-Motivation:
 
-Problem-Solving Attitude: They likely approach challenges with a proactive mindset believing they can find solutions through effort and ingenuity.
+He is highly self-driven and takes responsibility for his successes and setbacks. He is motivated to set and pursue both academic and professional goals with determination.
 
-Personal Accountability: They may feel more accountable for their decisions and less inclined to blame external factors such as luck, other people, or external circumstances for their life outcomes.
+#### Problem-Solving Attitude:
 
-Confidence in Control: The individual likely has confidence in their ability to control life's events, leading to higher resilience and perseverance when facing difficulties.
+He approaches challenges with a proactive mindset, believing that problems can be solved through effort, learning, and persistence.
 
-Possible Challenges:
+#### Personal Accountability:
 
-People with a strong internal locus of control might sometimes overestimate their ability to control situations, which could lead to frustration when faced with factors truly outside of their control.
+He takes ownership of his decisions and actions and is less likely to blame external factors such as luck, other people, or circumstances for his outcomes.
 
-They may also have higher stress levels when they feel they are not performing up to their own standards or expectations.
+#### Confidence in Control:
 
-In summary, this person likely takes a lot of responsibility for their actions, has a proactive attitude, and believes in their ability to influence their own outcomes. This aligns well with the traits of being conscientious, organized, and emotionally stable (from the Big Five analysis).
+He has strong confidence in his ability to influence life events, which supports resilience and perseverance when facing difficulties.
 
-## The student learned so far at SLITT
+### Possible Challenges:
 
-The BSc in IT - Data Science at Sri Lanka Institute of Information Technology (SLIIT) typically covers a broad range of subjects designed to provide students with a solid
+Individuals with a strong internal locus of control may sometimes overestimate their ability to control all situations. This can lead to frustration when facing circumstances that are genuinely outside their control.
 
-foundation in data science, information technology, and related disciplines. The core subjects generally focus on key areas such as data analytics, programming, statistics, and business applications of data science.
+Additionally, they may experience increased pressure or stress when they feel they are not performing up to their own expectations, as they tend to hold themselves highly accountable for outcomes.
 
-You are a second-year Semester 2 Student. Hence you have learned so far from SLIIT are
+In summary, this individual demonstrates a strong internal locus of control, characterized by self-motivation, responsibility, and a proactive approach to challenges. He believes in his ability to influence outcomes through his own efforts, which supports goal achievement and personal growth. This aligns well with his traits of being organized, disciplined, and emotionally stable.
 
-Year 1 | Semester 1
+### The student learned so far at SLIIT
+
+The BSc in IT - Artificial Intelligence at Sri Lanka Institute of Information Technology (SLIIT) covers a broad range of subjects designed to provide students with a strong foundation in artificial intelligence, information technology, and related disciplines. The core subjects focus on key areas such as machine learning, programming, statistics, and deep learning.
+
+Perera K.A.N is currently a second-year, Semester 2 undergraduate student. The subjects completed so far are as follows:
+
+#### Year 1
+
+#### Semester 1
+
 - Introduction to Programming
+
 - Data Communication Networks
+
 - Mathematics for Computing
+
 - Fundamentals of Computing
 
-Year 1 | Semester 2
+#### Semester 2
+
 - Discrete Mathematics
+
 - Data Structures and Algorithms
+
 - Object Oriented Programming
+
 - Technical Writing
 
-Year 2 | Semester 1 
-- Software Engineering
+#### Year 2
+
+#### Semester 1
+
 - Probability and Statistics
+
+- Software Engineering
+
 - Artificial Intelligence & Machine Learning
+
 - Database Design and Development
 
-Semester 2 | Semester 2
-- IT Project
-- Web and Mobile Technologies
-- Operating Systems & System Administration
-- Professional Skills
+#### Semester 2
 
+- Artificial Intelligence & Machine Learning Project
+
+- Operating Systems & System Administration
+
+- Web and Mobile Technologies
+
+- Professional Skills
 
 ## SWOT Analysis
 
-**Strengths:**
+### Strengths:
 
-- Ongoing Businesses and Leadership Roles:
+#### Strong Planning and Organizational Skills:
 
-    - Actively engaged in personal web development projects, demonstrating initiative and self-driven leadership in managing end-to-end project delivery.
+He demonstrates strong planning and organizational abilities, allowing him to effectively manage academic tasks, projects, and responsibilities in a structured and efficient manner.
 
-- Industry Experience and Versatility:
+#### Detail-Oriented and Responsible:
 
-    - Hands-on experience across frontend and backend development, including building and deploying full-stack web applications using React, Node.js, and MySQL.
+He pays close attention to details and ensures that his work is completed accurately and responsibly, maintaining a high standard in both academic and project work.
 
-- Diverse Roles and Industries Served:
+#### Creative and Innovative Thinking:
 
-    - Contributed to academic and personal projects spanning web application development, database management, and version-controlled collaborative environments.
+He has the ability to think creatively and generate innovative ideas, which is especially valuable in problem-solving and developing technical solutions.
 
-- Educational Qualifications and Professional Memberships:
+#### Good Problem-Solving Ability:
 
-    - Ongoing education in Information Technology (BSc in IT at SLIIT) with practical skills in modern web technologies and active participation in peer study groups and mentorship networks.
+He is capable of analyzing problems logically and identifying effective solutions, which is essential for success in software development and data science.
 
-**Weaknesses:**
+#### Strong Teamwork and Leadership Experience:
 
-- Financial Stability and Investment:
+He has experience working in teams and taking initiative in leadership roles, enabling him to collaborate effectively and contribute positively in group environments.
 
-    The individual notes limited financial stability and restricted access to significant investments for business growth. This could hinder scalability and the ability to take advantage of new business opportunities.
+#### Fluent in Both Sinhala and English Languages:
 
-- Lack of Comprehensive Technical Knowledge and Skills:
+His ability to communicate in both languages supports effective interaction in academic, professional, and social contexts.
 
-    There are acknowledged gaps in technical expertise, particularly in software development and driving innovation. This weakness could pose challenges in staying competitive especially in industries driven by technological advancements.
+#### Emotionally Stable and Performs Well Under Pressure:
 
-**Opportunities:**
+He is emotionally stable and able to remain calm under pressure, which helps him maintain performance even in stressful situations.
 
-- Rapid Digital Transformation:
+### Weaknesses:
 
-    The increasing digitalization of businesses across industries offers a growing market for innovative software solutions, presenting a significant opportunity for expansion.
+#### Tendency to Focus Too Much on Perfection/Details:
 
-- Social Media Networking and Digital Marketing:
+His strong attention to detail may sometimes lead to excessive focus on perfection, which can slow down task completion and reduce overall efficiency.
 
-    The rise of social media and digital marketing offers an effective platform for increasing brand visibility, customer engagement, and market penetration.
+#### Still Developing Advanced Machine Learning Skills:
 
-- Availability of Open-Source Technology:
+Although he has a foundational understanding, he needs to further develop advanced machine learning skills to meet industry expectations in data science.
 
-    The availability of open-source technologies provides cost-effective innovation opportunities, allowing the individual to leverage affordable yet powerful tools for business solutions.
+#### Limited Real-World Industry Experience:
 
-- Technical Expertise Accessibility:
+He currently has limited exposure to real-world industry environments, which may affect practical understanding and confidence in professional settings.
 
-    Skilled technical professionals are accessible for collaboration or hiring, making it easier to bridge technical gaps by forming partnerships or expanding the team.
+#### Difficulty Balancing Multiple Responsibilities at Times:
 
-- Customer Service Gaps:
+Managing academics, projects, and extracurricular activities simultaneously can sometimes be challenging, affecting consistency and time management.
 
-    Identified gaps in customer service present an opportunity to differentiate the business by focusing on superior customer experiences and service fulfillment.
+### Opportunities:
 
-**Threats:**
+#### High Demand for Data Science and AI Skills:
 
-- Advancements in AI and Other Technologies:
+The increasing demand for data science and AI skills provides strong career opportunities and a wide range of job prospects in the technology industry.
 
-    The rapid development of AI and other emerging technologies may outpace the individual's current technical capabilities, making it difficult to stay competitive without significant investment in technological upskilling.
+#### Access to University Projects and Resources:
 
-- Highly Competitive Market and Pricing Pressures:
+University projects and academic resources offer valuable opportunities to gain practical experience and strengthen technical skills.
 
-    The software industry is highly competitive, with many players pushing pricing down and increasing the need for differentiation. These pressures may erode profitability and make market entry more challenging.
+#### Online Platforms (Kaggle, GitHub) to Showcase Skills:
 
-- Evolution of SaaS (Software as a Service):
+Platforms such as Kaggle and GitHub allow him to build a portfolio, demonstrate his skills, and gain recognition from potential employers.
 
-    The growth of SaaS models poses a potential threat to traditional software solutions, necessitating a shift in business models to remain relevant and competitive.
+#### Networking Through Clubs and Tech Communities:
 
-**Strategies to Achieve Goals:**
+Participation in clubs and tech communities helps him expand professional networks, improve soft skills, and discover new opportunities.
 
-- Enhance Technical Knowledge and Skills:
+### Threats:
 
-    - Pursue advanced courses and certifications in software development, AI, and emerging technologies to bridge technical knowledge gaps.
+#### High Competition in Tech Internships and Jobs:
 
-    - Form partnerships with technical experts and firms to stay updated on technological advancements.
+The technology field is highly competitive, requiring him to continuously improve his skills and stand out among other candidates.
 
-    - Complete the degree at SLIIT by 2027, providing a solid foundation for future endeavors in data science and IT.
+#### Rapid Changes in Technology Requiring Continuous Learning:
 
-- Strengthen Financial Stability and Investment:
+The fast-paced nature of technology means he must constantly update his knowledge and adapt to new tools and trends.
 
-    - Develop a financial plan to manage cash flow and seek investment opportunities.
+#### Risk of Burnout Due to Heavy Workload:
 
-    - Explore funding options such as venture capital, angel investors, or grants to support business expansion and technological innovation.
+Balancing multiple responsibilities may lead to stress and burnout if not managed effectively.
 
-- Leverage Digital Transformation Opportunities:
+## Annexure B
 
-    - Focus on creating innovative solutions that cater to digital transformation needs across industries.
+## Strategies to achieve the goal
 
-    - Enhance customer experience by addressing existing service gaps and offering personalized, efficient solutions to stand out from competitors.
+### 1. Enhance Technical Knowledge and Skills:
 
-- Expand Marketing and Networking Efforts:
+#### Training and Certification:
 
-    - Implement a robust digital marketing strategy utilizing social media, SEO, and content marketing to increase brand visibility and customer reach.
+Pursue online courses and certifications in Machine Learning, and full-stack development to strengthen technical expertise and stay updated with industry trends.
 
-    - Engage in networking opportunities through industry events, webinars, and forums to build connections, partnerships, and future collaborations.
+#### Practical Project Development:
 
-## Conclusion:
+Work on real-world projects such as the MERN Stack+AI/ML system and mobile applications to gain hands-on experience and improve problem-solving skills.
 
-This individual has strong entrepreneurial and leadership abilities, backed by industry experience and academic qualifications. To achieve their full potential, they must focus on enhancing technical expertise, stabilizing finances, and leveraging digital transformation trends. By addressing customer service gaps and differentiating their solutions in a competitive market, they can further solidify their business presence while managing threats posed by evolving technologies and competitive pressures.
+#### Use of Online Platforms:
 
-## Big Five Personality Test
+Practice coding and model building through platforms like Kaggle, LeetCode, and GitHub to enhance technical proficiency and build a strong portfolio.
 
-> [!CAUTION]
-> **Please do this test and paste the screenshot here [https://www.outofservice.com/bigfive/]**
+### 2. Strengthen Academic Performance:
 
-## Cognitive Style Test
+#### Structured Study Plan:
 
-- K Value: 15
-- P Value: 14
-- C Value:16
+Follow a well-organized study schedule to ensure consistent learning and effective time management across all subjects.
 
-## Locus of Control
+#### Continuous Revision and Practice:
 
-- Test Value: 2
+Regularly revise concepts and practice problem-solving to improve understanding and achieve high academic performance.
+
+#### Focus on Key Subjects:
+
+Give special attention to core subjects such as Artificial Intelligence, Machine Learning, and Software Engineering to build a strong academic foundation.
+
+### 3. Gain Practical Experience and Build Portfolio:
+
+#### Project-Based Learning:
+
+Develop and deploy projects such as mobile applications and full-stack systems to demonstrate practical skills.
+
+#### GitHub Portfolio Development:
+
+Upload projects with proper documentation to GitHub to showcase technical abilities to potential employers.
+
+#### Participation in Competitions and Challenges:
+
+Engage in coding challenges and hackathons to gain experience and improve problem-solving skills.
+
+### 4. Improve Professional and Soft Skills:
+
+#### Communication and Presentation Skills:
+
+Actively participate in presentations, group discussions, and tech events to enhance communication abilities.
+
+#### Teamwork and Leadership Development:
+
+Continue involvement in university clubs and group projects to strengthen leadership and collaboration skills.
+
+#### Networking:
+
+Build professional connections through tech communities, events, and LinkedIn to explore career opportunities.
+
+### 5. Maintain Work-Life Balance and Personal Well-being:
+
+#### Time Management:
+
+Balance academic work, projects, and extracurricular activities to avoid overload and maintain productivity.
+
+#### Stress Management:
+
+Practice healthy habits and take breaks when needed to prevent burnout and maintain mental well-being.
+
+## Curriculum Vitae
+
+## Test Evidences
+
+### THE BIG FIVE PROJECT PERSONALITY TEST
+
+<div style='text-align: center;'><img src='https://maas-watermark-prod-new.cn-wlcb.ufileos.com/ocr%2Fcrop%2F20260408235302ba9e5f9bb9314149%2Fcrop_1_1775663611413.png?UCloudPublicKey=TOKEN_6df395df-5d8c-4f69-90f8-a4fe46088958&Signature=jNPlY%2F%2F%2Fhdo4cOKQPwOH%2BWwUNoo%3D&Expires=1776268411' alt='OCR图片'/></div>
+
+#### What aspects of personality does this tell me about?
+
+<table border="1"><tr><td colspan="2">There has been much research on how people describe others, and five major dimensions of human personality have been found. They are often referred to as the OCEAN model of personality, because of the acronym from the names of the five dimensions. Here are your results:</td></tr><tr><td colspan="2">Open-Mindedness
+High scorers tend to be original, creative, curious, complex; Low scorers tend to be conventional, down to earth, narrow interests, uncreative.
+You thrive on new ideas and creative thinking.
+Your percentile:95</td></tr><tr><td colspan="2">Conscientiousness
+High scorers tend to be reliable, well-organized, self-disciplined, careful; Low scorers tend to be disorganized, undependable, negligent.
+You are extremely diligent, organized, and highly responsible.
+Your percentile:99</td></tr><tr><td colspan="2">Extraversion
+High scorers tend to be sociable, friendly, fun loving, talkative; Low scorers tend to be introverted, reserved, inhibited, quiet.
+You enjoy being around others and actively participate in social activities.
+Your percentile:69</td></tr><tr><td colspan="2">Agreeableness
+High scorers tend to be good natured, sympathetic, forgiving, courteous; Low scorers tend to be critical, rude, harsh, callous.
+You are highly compassionate, considerate, and naturally cooperative.
+Your percentile:94</td></tr><tr><td colspan="2">Negative Emotionality
+High scorers tend to be nervous, high-strung, insecure, worrying; Low scorers tend to be calm, relaxed, secure, hardy.
+You are highly composed, emotionally stable, and rarely feel strong emotions.
+Your percentile:15</td></tr></table>
+
+### Cognitive Style Test
+
+<table border="1"><tr><td></td><td>Value(From1to5)</td></tr><tr><td>1. I like much variety in my life.</td><td>4</td></tr><tr><td>2. I study each problem until I have understood the underlying logic</td><td>5</td></tr><tr><td>3. I prefer well-prepared meetings with a clear agenda and strict time management</td><td>5</td></tr><tr><td>4. I like to contribute to innovative solutions.</td><td>5</td></tr><tr><td>5. New ideas attract me more than existing solutions</td><td>4</td></tr><tr><td>6. I make definite engagements which I follow-up with great attention to detail.</td><td>5</td></tr><tr><td>7. I try to avoid routine.</td><td>5</td></tr><tr><td>8. I want to have a full understanding of all problems</td><td>3</td></tr><tr><td>9. Developing a clear planning is very important to me</td><td>5</td></tr><tr><td>10. A good task is a well-prepared task.</td><td>5</td></tr><tr><td>11. I prefer to look for creative solutions.</td><td>5</td></tr><tr><td>12. I always want to know what should be done when.</td><td>5</td></tr><tr><td>13. I like to analyze problems.</td><td>5</td></tr><tr><td>14. I like to extend the boundaries</td><td>3</td></tr><tr><td>15. I make detailed analyses.</td><td>5</td></tr><tr><td>16. I prefer clear structures to do my job.</td><td>5</td></tr><tr><td>17. I am motivated by ongoing innovation.</td><td>5</td></tr><tr><td>18. I like detailed action plans.</td><td>5</td></tr><tr><td colspan="2">Cognitive Style Indicator(CoSI): scoring key</td></tr><tr><td colspan="2">The scores will sum up and you will see how you score on the different cognitive styles.</td></tr><tr><td>K=5+3+5+5</td><td>18</td></tr><tr><td>P=5+5+5+5+5+5</td><td>35</td></tr><tr><td>C=4+5+4+5+5+3+5</td><td>31</td></tr></table>
+
+
+### Locus of Control Test
+
+
+<table class="table table-bordered"><thead><tr><th>2a</th><th>9a</th><th>16a</th><th>23a</th></tr></thead><tbody><tr><td>3b</td><td style="background-color: yellow;">10a</td><td>17a</td><td>25a</td></tr><tr><td>4b</td><td>11b</td><td>18a</td><td>26b</td></tr><tr><td style="background-color: yellow;">5b</td><td>12b</td><td>20a</td><td>28b</td></tr><tr><td>6a</td><td>13b</td><td>21a</td><td>29a</td></tr><tr><td>7a</td><td>15b</td><td>22b</td><td></td></tr></tbody></table>

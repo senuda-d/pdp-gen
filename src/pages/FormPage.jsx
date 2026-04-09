@@ -148,26 +148,26 @@ function FormPage() {
                   <label>{item.question}</label>
 
                   {item.id === 21 || item.id === 22 ? (
-                    <div style={{ 
-                      display: "flex", 
-                      flexDirection: "row", 
-                      gap: "16px", 
-                      alignItems: "flex-start", 
-                      width: "100%", 
-                      flexWrap: "wrap" 
+                    <div style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      gap: "16px",
+                      alignItems: "flex-start",
+                      width: "100%",
+                      flexWrap: "wrap"
                     }}>
                       <div style={{ flex: "1 1 300px" }}>
                         {item.id === 21 ? (() => {
                           let val = answers[item.id];
                           let k = "", p = "", c = "";
-                          
+
                           if (typeof val === "object" && val !== null) {
                             if (val.type === 'kpc-result') {
                               k = val.k || ""; p = val.p || ""; c = val.c || "";
                             } else {
                               // migration from early psycap attempt
-                              k = val.hope || val.k || ""; 
-                              p = val.efficacy || val.p || ""; 
+                              k = val.hope || val.k || "";
+                              p = val.efficacy || val.p || "";
                               c = val.resilience || val.c || "";
                             }
                           } else if (typeof val === "string") {
@@ -195,16 +195,16 @@ function FormPage() {
                               ].map(dim => (
                                 <div key={dim.key} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                                   <span style={{ minWidth: '95px', fontSize: '13px', color: '#6b7280', fontWeight: 600 }}>{dim.label}:</span>
-                                  <input 
-                                    type="text" 
-                                    placeholder="Value" 
-                                    value={dim.val} 
+                                  <input
+                                    type="text"
+                                    placeholder="Value"
+                                    value={dim.val}
                                     onChange={(ev) => {
                                       const newVals = { k, p, c };
                                       newVals[dim.key] = ev.target.value;
                                       update(newVals);
-                                    }} 
-                                    style={{ flex: 1, margin: 0 }} 
+                                    }}
+                                    style={{ flex: 1, margin: 0 }}
                                   />
                                 </div>
                               ))}
@@ -220,13 +220,13 @@ function FormPage() {
                           />
                         )}
                       </div>
-                      <button 
-                        type="button" 
-                        className="secondary-btn" 
-                        onClick={() => navigate(item.id === 21 ? '/kpc' : '/locus')} 
-                        style={{ 
-                          whiteSpace: "nowrap", 
-                          padding: "12px 20px", 
+                      <button
+                        type="button"
+                        className="secondary-btn"
+                        onClick={() => navigate(item.id === 21 ? '/kpc' : '/locus')}
+                        style={{
+                          whiteSpace: "nowrap",
+                          padding: "12px 20px",
                           height: "45px",
                           display: "flex",
                           alignItems: "center",
@@ -237,6 +237,16 @@ function FormPage() {
                         {item.id === 21 ? 'Calculate KPC' : 'Calculate Locus'}
                       </button>
                     </div>
+                  ) : item.type === "select" ? (
+                    <select
+                      value={answers[item.id] || ""}
+                      onChange={(e) => handleChange(item.id, e.target.value)}
+                    >
+                      <option value="" disabled>{item.placeholder || "Select an option"}</option>
+                      {(item.options || []).map((opt) => (
+                        <option key={opt} value={opt}>{opt}</option>
+                      ))}
+                    </select>
                   ) : (
                     <>
                       {item.type === "input" ? (

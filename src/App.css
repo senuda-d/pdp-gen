@@ -205,7 +205,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   padding: 12px 14px;
   border-radius: 10px;
   border: 1px solid #d1d5db; /* gray-300 */
@@ -214,11 +215,24 @@ textarea {
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   background: #f9fafb; /* gray-50 */
   color: #111827;
+  width: 100%;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8.825a.5.5 0 0 1-.354-.146l-4-4a.5.5 0 1 1 .708-.708L6 7.617l3.646-3.646a.5.5 0 1 1 .708.708l-4 4A.5.5 0 0 1 6 8.825z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
 }
 
 /* Smooth Interactive Focus */
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: none;
   border-color: #6366f1; /* indigo-500 */
   background: #ffffff;

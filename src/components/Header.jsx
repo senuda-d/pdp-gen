@@ -1,13 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Sparkles } from "lucide-react";
 
 function Header() {
   return (
     <header className="main-header">
       <div className="header-container">
         <Link to="/" className="logo">
-          <Sparkles className="logo-icon" size={24} />
+          <img
+            src="/favicon/407x407.png"
+            alt="PDP AI Logo"
+            className="logo-icon"
+            style={{ width: 48, height: 48, objectFit: 'contain' }}
+          />
           <span>PDP <span className="logo-accent">AI</span></span>
         </Link>
         <nav className="nav-menu">
